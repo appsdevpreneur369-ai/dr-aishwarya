@@ -23,14 +23,20 @@ export async function getGoogleReviews(): Promise<GoogleReviews | null> {
   const fallback: GoogleReviews = { rating: g.rating, count: g.reviewCount, url: g.url, reviews: g.reviews, live: false, checkedOn: g.checkedOn };
   const key = process.env.GOOGLE_PLACES_API_KEY;
   const placeId = process.env.GOOGLE_PLACE_ID || g.placeId;
-  if (!key || !placeId) return fallback;
+  if (!key || !placeId) {
+    if (process.env.NEXT_PHASE !== 'phase-production-build') console.warn(`[google-reviews] fallback: ${!key ? 'GOOGLE_PLACES_API_KEY not set' : 'no placeId'}`);
+    return fallback;
+  }
   try {
     const res = await fetch(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=en`, {
       headers: { 'X-Goog-Api-Key': key, 'X-Goog-FieldMask': 'rating,userRatingCount,googleMapsUri,reviews' },
       next: { revalidate: 86400 },
       signal: AbortSignal.timeout(5000),
     });
-    if (!res.ok) return fallback;
+    if (!res.ok) {
+      console.warn(`[google-reviews] fallback: Places API HTTP ${res.status} ${(await res.text()).slice(0, 200)}`);
+      return fallback;
+    }
     const p = (await res.json()) as PlacesResponse;
     const reviews = (p.reviews ?? [])
       .filter((r) => r.text?.text && r.authorAttribution?.displayName && r.rating)
@@ -43,7 +49,8 @@ export async function getGoogleReviews(): Promise<GoogleReviews | null> {
       live: true,
       checkedOn: new Date().toISOString().slice(0, 10),
     };
-  } catch {
+  } catch (e) {
+    console.warn(`[google-reviews] fallback: ${e instanceof Error ? e.message : String(e)}`);
     return fallback;
   }
 }
