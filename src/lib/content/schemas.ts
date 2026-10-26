@@ -91,7 +91,7 @@ export const ClinicSchema = z.object({
       rating: z.number().min(1).max(5).nullable(),
       reviewCount: z.number().int().nonnegative(),
       checkedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-      url: z.string().url().startsWith('https://www.google.'),
+      url: z.string().url().regex(/^https:\/\/(www|maps)\.google\.com\//, 'must be a Google (www/maps.google.com) link'),
       placeId: z.string(),
       reviewTopics: z.array(z.string()),
       reviews: z.array(z.object({ author: z.string().min(1), rating: z.number().int().min(1).max(5), text: z.string().min(1), when: z.string().min(1) })),

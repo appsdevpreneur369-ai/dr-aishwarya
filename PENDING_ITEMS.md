@@ -3,11 +3,10 @@
 Updated 25 Oct 2026. Swap steps for every clinic item: `docs/EDITING.md` → "One-edit swaps".
 
 ## From the clinic (shown as Draft / placeholder until received)
-- [ ] **Google star rating**: the site shows "27 Google reviews" (account owner, 26 Oct 2026) and links to her Google listing; stars appear once the real rating is copied into `clinic.json` `google.rating` (with `checkedOn`). Optional: 3–6 review quotes copied VERBATIM with the reviewer's name and date into `google.reviews`.
-- [ ] **Live Google reviews (optional, needs the owner's OK: paid Google API on the GCP project)**: enable the Places API (New), create an API key restricted to it, set `GOOGLE_PLACES_API_KEY` on `adc-frontend-staging` (Cloud Run env/secret) and `google.placeId`. The site then shows the live rating, count and latest reviews (refreshed daily). The same Place ID also gives the review link: `https://search.google.com/local/writereview?placeid=<id>`.
-- [ ] **Google "write a review" link**: Place ID via Google's Place ID Finder → `clinic.json` `googleReview.writeReviewUrl`. Until then the tenant file sends `googleReviewLink: null` (core creates **no** review rows); staging demo uses the Google search panel stand-in (`--demo-review-link`).
+- [x] **Google reviews live** (26 Oct, owner's go): Places API (New) enabled on `sincere-stock-499113-f1`, key `adc-website-places` restricted to places.googleapis.com, set as `GOOGLE_PLACES_API_KEY` on `adc-frontend-staging`; Place ID `ChIJiTGEzJ11SjoRJWqJxvvgvbA` (5.0 from 27 reviews on 26 Oct). Google returns at most 5 reviews. Cost: Place Details with reviews is a paid SKU; calls are at most ~1/day per instance plus cold starts. For production, move the key to Secret Manager.
+- [x] **Google "write a review" link** (26 Oct: built from her Place ID via the Places API; tenant file now sends it as `googleReviewLink`, so onboarding no longer needs `--demo-review-link`).
 - [ ] **24×7 emergency line**: Dr. Aishwarya to confirm (who answers at night; phone advice only or night visits). `emergency.json` `availability`.
-- [ ] Google Maps place link + pin (`clinic.json` `maps`): map and directions are approximate (address search).
+- [x] Google Maps place link + pin (26 Oct, Places API: cid link + exact pin).
 - [ ] Clinic email.
 - [ ] Dr. Aishwarya: State Dental Council registration number (tenant sends `PENDING-VERIFICATION-AISHWARYA`), photo, years of experience, consultation fee, slot length (15 min assumed), her own consultation hours (clinic hours assumed).
 - [ ] Confirm the placeholder treatment categories: check-ups, cleaning, extractions/minor oral surgery, crowns/bridges/dentures. Signboard "Cosmetology": cosmetic dentistry only for now; ask whether she offers facial aesthetics.

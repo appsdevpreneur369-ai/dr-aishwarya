@@ -111,12 +111,15 @@
     ]
   },
   "maps": {
-    "status": "placeholder",
-    "_note": "No Google Maps place link supplied yet. Until shareUrl is set, 'Get directions' and the embedded map search for the query below and the site says the pin is approximate. To finish: open the clinic in Google Maps → Share → copy the link into shareUrl, and set geo from the pin.",
+    "status": "approved",
+    "_note": "Google Maps place of the clinic (Places API, 26 Oct 2026, same Place ID as google.placeId): stable cid link and the pin from Google.",
     "query": "Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur, Andhra Pradesh 522007",
-    "shareUrl": "",
-    "embedUrl": "",
-    "geo": null,
+    "shareUrl": "https://maps.google.com/?cid=12735582693245938213",
+    "embedUrl": "https://www.google.com/maps?q=Aishwarya+Dental+Clinic+and+Implant+Centre,+Vidyanagar,+Guntur&ll=16.3147313,80.428532&z=17&output=embed",
+    "geo": {
+      "lat": 16.3147313,
+      "lng": 80.428532
+    },
     "wayfinding": [
       {
         "icon": "navigation",
@@ -147,19 +150,19 @@
     "value": "Caring for smiles in Vidyanagar, Guntur"
   },
   "googleReview": {
-    "status": "placeholder",
-    "_note": "The 'write a review' link patients receive in the review request (ClinicFlow googleReviewLink). ONE edit to go live: paste https://search.google.com/local/writereview?placeid=<PLACE_ID> (Place ID from Google's free Place ID Finder) or https://g.page/r/<code>/review into writeReviewUrl and set status 'approved'; then run `npm run tenant`. While placeholder, the tenant file sends null. stagingDemoUrl is the clinic's Google search panel supplied by the account owner: used ONLY by scripts/staging/setup-staging.py --demo-review-link so the review request can be shown on staging; never production.",
-    "writeReviewUrl": "",
+    "status": "approved",
+    "_note": "Google write-review link built from her Place ID ChIJiTGEzJ11SjoRJWqJxvvgvbA (Places API text search, 26 Oct 2026: exact name and address match, 27 reviews). Used as ClinicFlow googleReviewLink (npm run tenant) and the Write a review button. stagingDemoUrl is no longer needed (kept for reference).",
+    "writeReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJiTGEzJ11SjoRJWqJxvvgvbA",
     "stagingDemoUrl": "https://www.google.com/search?kgmid=/g/11wwrmhfw9&q=Aishwarya+Dental+Clinic+and+Implant+Centre"
   },
   "google": {
     "status": "approved",
-    "_note": "Public Google reviews. reviewCount 27 supplied by the account owner on 26 Oct 2026 (checkedOn). rating is NULL until someone copies the real star rating from her Google listing: the site then shows stars; until then it shows the count only. reviews = optional VERBATIM quotes copied from Google with the reviewer name and the date Google shows (never edited, never invented). url opens her Google listing where the reviews are. LIVE MODE: set GOOGLE_PLACES_API_KEY (server-side env, never NEXT_PUBLIC) and placeId, and src/lib/google-reviews.ts fetches rating, count and the latest reviews from the Google Places API once a day; these hand-copied values are the fallback. Never emitted as aggregateRating JSON-LD.",
+    "_note": "Google reviews. LIVE on any environment with GOOGLE_PLACES_API_KEY set (adc-frontend-staging since 26 Oct 2026): src/lib/google-reviews.ts fetches rating, count and the latest reviews (Google returns at most 5) from the Places API for placeId, refreshed at most once a day; review text is never stored in this repo (Google Maps Platform terms: only the Place ID may be kept). The values below are only the fallback when the API is unreachable: reviewCount 27 from the account owner (26 Oct 2026), rating null (never copied by hand). url = her listing on Google Maps (stable cid link). Never emitted as aggregateRating JSON-LD.",
     "rating": null,
     "reviewCount": 27,
     "checkedOn": "2026-10-26",
-    "url": "https://www.google.com/search?kgmid=/g/11wwrmhfw9&q=Aishwarya+Dental+Clinic+and+Implant+Centre",
-    "placeId": "",
+    "url": "https://maps.google.com/?cid=12735582693245938213",
+    "placeId": "ChIJiTGEzJ11SjoRJWqJxvvgvbA",
     "reviewTopics": [],
     "reviews": []
   }

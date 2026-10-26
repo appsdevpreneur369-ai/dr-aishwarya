@@ -23,8 +23,8 @@ import { pageMetadata } from '@/lib/seo';
 import { fill, fullAddress } from '@/lib/vars';
 
 export const metadata = pageMetadata({ path: '/', title: sitePages.home.title, description: sitePages.home.description, absoluteTitle: true });
-// Live Google reviews (when a Places API key is configured) refresh at most once a day.
-export const revalidate = 86400;
+// Live Google reviews: the page re-renders at most every 10 minutes (the build has no API key); the Places API itself is called at most once a day (src/lib/google-reviews.ts).
+export const revalidate = 600;
 
 export default async function HomePage() {
   const h = siteHome;

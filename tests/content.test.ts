@@ -69,17 +69,19 @@ describe('content schema', () => {
   it('Google reviews: 27 from the account owner, rating null until copied, verbatim quotes only, never aggregateRating JSON-LD', () => {
     const g = read('clinic.json').google;
     expect(g.reviewCount).toBe(27);
-    expect(g.rating).toBeNull();
-    expect(g.url).toMatch(/^https:\/\/www\.google\./);
+    expect(g.rating).toBeNull(); // fallback only: live rating comes from the Places API
+    expect(g.placeId).toBe('ChIJiTGEzJ11SjoRJWqJxvvgvbA');
+    expect(g.reviews).toEqual([]); // Google review text is never stored in the repo
+    expect(g.url).toMatch(/^https:\/\/(www|maps)\.google\.com\//);
     for (const r of g.reviews) expect(r.author.length && r.text.length && r.when.length).toBeTruthy();
     expect(fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'google-reviews.ts'), 'utf8')).not.toMatch(/process.env.NEXT_PUBLIC/);
     expect(fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'jsonld.ts'), 'utf8')).not.toMatch(/aggregateRating/);
   });
 
-  it('review link: placeholder until a real Google write-review URL is pasted (one-field swap)', () => {
+  it('review link: the real write-review URL from her Place ID; the schema still rejects a non-review link', () => {
     const clinic = read('clinic.json');
-    expect(clinic.googleReview.status).toBe('placeholder');
-    expect(clinic.googleReview.writeReviewUrl).toBe('');
+    expect(clinic.googleReview.status).toBe('approved');
+    expect(clinic.googleReview.writeReviewUrl).toBe(`https://search.google.com/local/writereview?placeid=${clinic.google.placeId}`);
     const withLink = (url: string) => ({ ...clinic, googleReview: { ...clinic.googleReview, status: 'approved', writeReviewUrl: url } });
     expect(ClinicSchema.safeParse(withLink(clinic.googleReview.stagingDemoUrl)).success).toBe(false);
     expect(ClinicSchema.safeParse(withLink('https://search.google.com/local/writereview?placeid=ChIJabc123')).success).toBe(true);
@@ -122,15 +124,16 @@ describe('content schema', () => {
     for (const text of all) expect(text.toLowerCase()).not.toMatch(/sindhu|suhasini|drsdc|smsdc|ashramam|parvathi|ramakanth|spdc|tadepal|perreddy/);
   });
 
-  it('the clinic is "Aishwarya Dental Clinic and Implant Centre" with the supplied address, phone and hours; map pin still to come', () => {
+  it('the clinic is "Aishwarya Dental Clinic and Implant Centre" with the supplied address, phone and hours and its Google Maps pin', () => {
     const c = read('clinic.json');
     expect(c.name.value).toBe('Aishwarya Dental Clinic and Implant Centre');
     expect(c.address.postalCode).toBe('522007');
     expect(c.phone.e164).toBe('+917075565444');
     expect(c.whatsapp.e164).toBe('+917075565444');
     expect(c.hours.days.find((d: { day: string }) => d.day === 'sunday').sessions).toEqual([]);
-    expect(c.maps.status).toBe('placeholder');
-    expect(c.maps.geo).toBeNull();
+    expect(c.maps.status).toBe('approved');
+    expect(c.maps.geo).toEqual({ lat: 16.3147313, lng: 80.428532 });
+    expect(c.maps.shareUrl).toBe(c.google.url);
   });
 
   it('never publishes prices or invented stats', () => {

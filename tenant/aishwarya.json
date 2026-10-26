@@ -79,8 +79,8 @@
     "_note_customDomain": "From content/portal.json enterprise.subdomain (PROPOSED, not yet confirmed by the clinic). The tenant app + LB host rule + DNS must exist on the target environment (D:\\ClinicFlow\\CLAUDE.md) -- needs the owner's APPROVED.",
     "coverPhotoUrl": null,
     "description": "Aishwarya Dental Clinic and Implant Centre in Vidyanagar, Guntur, is run by Dr. Aishwarya P, a periodontist and implantologist (MDS) with a fellowship in laser dentistry.",
-    "googleReviewLink": null,
-    "_note_googleReviewLink": "PLACEHOLDER: no write-review link yet -> null, so core creates NO review-request rows for this clinic. Paste the link into content/clinic.json googleReview.writeReviewUrl, set status approved, run npm run tenant. Staging demo only: scripts/staging/setup-staging.py --demo-review-link sets the clinic Google search URL instead."
+    "googleReviewLink": "https://search.google.com/local/writereview?placeid=ChIJiTGEzJ11SjoRJWqJxvvgvbA",
+    "_note_googleReviewLink": "Google write-review link from content/clinic.json googleReview (approved)."
   },
   "owner": {
     "email": "appsdevpreneur369+adc-admin@gmail.com",
@@ -205,7 +205,7 @@
     "ADC: plan ENTERPRISE (white label) -- theme tokens and appTitle applied; upload the logo (public/brand/logo-mark.png) and favicon (src/app/icon.png) after onboarding.",
     "ADC: Dr. Aishwarya uses placeholder mciRegistrationNumber PENDING-VERIFICATION-AISHWARYA; replace with the State Dental Council number before any real e-prescription.",
     "ADC: clinic email not confirmed (null). Phone and WhatsApp +917075565444 supplied by the account owner.",
-    "ADC: googleReviewLink NOT set (placeholder) -- no review requests until it is.",
+    "ADC: googleReviewLink set.",
     "ADC: 24x7 emergency phone line shown on the website as a Draft (placeholder) until Dr. Aishwarya confirms it.",
     "ADC: Sunday closed -- no Sunday schedule rows.",
     "ADC: new clinics start PENDING -- a super-admin must set status ACTIVE (PUT /clinics/{id}) before the public booking page works; the importer does not do this."

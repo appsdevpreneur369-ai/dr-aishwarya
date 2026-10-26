@@ -13,6 +13,8 @@ import { pageMetadata } from '@/lib/seo';
 const p = sitePages.about;
 export const metadata = pageMetadata({ path: '/about', title: p.title, description: p.description });
 
+export const revalidate = 600;
+
 export default async function AboutPage() {
   const a = siteAbout;
   const headPhoto = headDoctor.photo ? getImage(headDoctor.photo) : null;
