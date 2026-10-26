@@ -4,7 +4,7 @@ Public website for **Aishwarya Dental Clinic and Implant Centre**, 4-5-57, besid
 
 **Delivery model: website + core tenant**, copied from the SPDC pattern (`D:\SPDC`). This repo is the public site plus the generated tenant file `tenant/aishwarya.json`. Every role and workflow comes from ClinicFlow core, branded via theme tokens, logo and appTitle. **Never fork core** (`D:\ClinicFlow\CLAUDE.md` forbids per-tenant codebases).
 
-Status (25 Oct 2026): built and checked locally. **Not onboarded, not deployed, no git repo yet.** Open items: `PENDING_ITEMS.md`. Demo flow: `docs/DEMO_SCRIPT.md`.
+Status (26 Oct 2026): repo https://github.com/appsdevpreneur369-ai/dr-aishwarya (`main`). **Website on staging** (owner's yes 26 Oct); staging API CORS includes it. **Clinic not yet onboarded** (setup-staging.py needs the owner's super-admin password). Open items: `PENDING_ITEMS.md`. Demo flow: `docs/DEMO_SCRIPT.md`.
 
 ## Hard rules
 
@@ -46,7 +46,7 @@ Next.js 14.2 App Router, TypeScript strict, Tailwind, next/font (**Playfair Disp
 
 In Git Bash, prefix scripts that take `/paths` with `MSYS_NO_PATHCONV=1`.
 
-## Deployments (none yet)
+## Deployments
 
 Same manual pattern as SPDC: build the image locally, push to Artifact Registry, `gcloud run deploy`. Never touch other services, `clinicflow-lb`, certs or DNS.
 
@@ -57,4 +57,12 @@ Same manual pattern as SPDC: build the image locally, push to Artifact Registry,
 | Staging service | `adc-frontend-staging`: 256Mi, 1 CPU, min-instances 0 (1 only during the meeting window), unauthenticated, port 3000 |
 | Expected URL | https://adc-frontend-staging-1071497363324.asia-south1.run.app |
 | Build args | `NEXT_PUBLIC_SITE_ENV=staging`, `NEXT_PUBLIC_SHOW_PLACEHOLDER_BADGES=true`, `NEXT_PUBLIC_NOINDEX=true`, `NEXT_PUBLIC_SITE_URL=<staging URL>`, `NEXT_PUBLIC_CLINICFLOW_API_URL=https://clinicflow-api-staging-1071497363324.asia-south1.run.app/api/v1`, `NEXT_PUBLIC_CLINICFLOW_CLINIC_SLUG=aishwarya-dental-clinic`, `NEXT_PUBLIC_BOOKING_OTP_HINT=123456`, `NEXT_PUBLIC_PORTAL_BASE_URL=https://clinicflow-frontend-staging-1071497363324.asia-south1.run.app` |
+| Build | `gcloud builds submit --project sincere-stock-499113-f1 --region asia-south1 --config cloudbuild.staging.yaml --substitutions _TAG=$(git rev-parse --short HEAD) .` then `gcloud run deploy adc-frontend-staging --project sincere-stock-499113-f1 --region asia-south1 --image <image>:<tag>` |
 | Staging API CORS | Add the site origin to `APP_CORS_ALLOWEDORIGINS` of `clinicflow-api-staging` with `--update-env-vars` (keep every existing origin). |
+
+History (staging):
+
+| Date | Commit / image tag | Revision | Notes |
+| --- | --- | --- | --- |
+| 2026-10-26 | (ClinicFlow API, env only) | `clinicflow-api-staging-00098-556` | `APP_CORS_ALLOWEDORIGINS` += ADC origin, the 7 existing origins kept (rollback `00097-pzn`, the modular-pricing revision). Verified ADC/SPDC/SMSDC allowed, unknown origin 403, no ERROR logs. |
+| 2026-10-26 | `7253992` | `adc-frontend-staging-00001-75c` | First deploy (Cloud Build). 13 pages 200, 404 page, noindex header + robots Disallow, `/login` 307 to the staging portal, no ERROR logs. |

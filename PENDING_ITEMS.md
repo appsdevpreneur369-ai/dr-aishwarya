@@ -17,11 +17,11 @@ Updated 25 Oct 2026. Swap steps for every clinic item: `docs/EDITING.md` → "On
 
 ## Needs the owner's yes (not done)
 - [ ] Staging onboarding (`scripts/staging/setup-staging.py --demo-review-link`). Check first that no other session is deploying core to staging.
-- [ ] Add the site origin to staging API CORS (`APP_CORS_ALLOWEDORIGINS`, `--update-env-vars` only).
-- [ ] Deploy `adc-frontend-staging` (256Mi, min 0; min 1 during the meeting window, then back to 0).
+- [x] Add the site origin to staging API CORS (26 Oct, `clinicflow-api-staging-00098-556`).
+- [x] Deploy `adc-frontend-staging` (26 Oct, `00001-75c`, 256Mi, min 0). Set min 1 during the meeting window, then back to 0.
 - [ ] Post-visit demo data (`scripts/staging/seed-post-visit-demo.py` + the two SQL files it writes, run on the staging DB).
 - [ ] Booking e2e against staging after onboarding.
-- [ ] GitHub repo + first push (no git repo yet).
+- [x] GitHub: https://github.com/appsdevpreneur369-ai/dr-aishwarya (26 Oct).
 
 ## Core (ClinicFlow), reported, not patched here
 - [ ] **No per-visit message preview / timeline screen** for the clinic admin. `GET /notifications/appointment/{id}/logs` exists (type, channel, status) but returns no message text and no screen uses it; the `[DRY RUN]` text is only in the API log. Being added in the modular-pricing session (Review Booster S5).
@@ -29,4 +29,4 @@ Updated 25 Oct 2026. Swap steps for every clinic item: `docs/EDITING.md` → "On
 - [ ] **Messages use the full clinic name** (42 characters: "Aishwarya Dental Clinic and Implant Centre"). Spec W0/W9 has a "name shown in messages" (≤ 40) setting; not in core yet.
 - [ ] **Importer (`onboard_tenant.py`) does not send `googleReviewLink`**: our setup script sets it with `PUT /clinics/{id}` (step 5).
 - [ ] Importer takes the super-admin password as a command-line argument (briefly visible in the process list).
-- [ ] `POST /appointments/quick-visit` exists on core HEAD (`94ac120`, modular pricing); not known whether it is on staging. The demo seed falls back to walk-in token + start + complete.
+- [ ] `POST /appointments/quick-visit` is on staging since `clinicflow-api-staging-00097-pzn` (modular pricing, 25 Oct). The demo seed falls back to walk-in token + start + complete.
