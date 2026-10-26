@@ -29,8 +29,8 @@ Every record has `"status": "approved" | "placeholder"`. With `NEXT_PUBLIC_SHOW_
 | Phone / WhatsApp (+91 70755 65444) | `content/clinic.json` → `phone`, `whatsapp` |
 | Address, directions | `clinic.json` → `address`, `maps.wayfinding` |
 | Opening hours (Mon–Sat 10–8, Sunday closed) | `clinic.json` → `hours.days` (an empty `sessions` list = closed) |
-| Colours / fonts | `content/brand.json` (Playfair Display + Manrope, registered in `src/lib/theme.ts`) |
-| Logo | `images/logo.png`, then `npm run brand` (header mark, favicon, app icons, OG image) |
+| Colours / fonts | `content/brand.json` (Sora + Nunito Sans, registered in `src/lib/theme.ts`) |
+| Logo, favicon, app icons | `images/logo.png`, then `npm run brand` (header mark, favicon, app icons, OG image) and `node scripts/qa/icon-preview.mjs` to check them on `docs/icon-preview.png`. Icons are the white tooth on a violet rounded tile (gradient `iconTop` → `primary` from `content/brand.json`); the white background of logo.png is cut out automatically. The 16 px favicon shows the crown only (the implant screw is noise at that size). Apple icon is a full square (iOS rounds it); the manifest has 192, 512 and a maskable 512. After a deploy, browsers keep the old favicon: hard-refresh or open a new tab. |
 | Photos / gallery | `content/images.json`, `content/gallery.json` (stock captions must say "representative") |
 | Doctor profile | `content/doctors.json` |
 | Treatments | `content/services.json` (visit counts say "usually"; never prices) |

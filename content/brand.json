@@ -1,8 +1,9 @@
 {
   "status": "placeholder",
-  "_note": "Aishwarya Dental palette v2 (26 Oct 2026, owner asked for a dental look that differs from the teal, blue and green used by the other ClinicFlow247 clinic sites): violet taken from the clinic's own name label on Dr. Aishwarya's photo, on clean clinical white with lavender tints. primary = buttons, links, the main call to action (white text). 'navy' keeps its key name for the shared components but is a deep violet-ink here (footer, dark bands). 'cta' is a light lilac ACCENT for icons/numbers on dark bands and soft fills (graphite ctaInk text on it); the main button is primary (src/app/globals.css .btn-cta). 'mint' keys are lavender tints: decoration only on light backgrounds, as text only on navy (mintOnDark). Colours become CSS variables (src/lib/theme.ts) and the ClinicFlow white-label theme tokens (npm run tenant). Run `npm run contrast` after any change.",
+  "_note": "Aishwarya Dental palette v2 (26 Oct 2026, owner asked for a dental look that differs from the teal, blue and green used by the other ClinicFlow247 clinic sites): violet taken from the clinic's own name label on Dr. Aishwarya's photo, on clean clinical white with lavender tints. primary = buttons, links, the main call to action (white text). 'navy' keeps its key name for the shared components but is a deep violet-ink here (footer, dark bands). 'cta' is a light lilac ACCENT for icons/numbers on dark bands and soft fills (graphite ctaInk text on it); the main button is primary (src/app/globals.css .btn-cta). 'mint' keys are lavender tints: decoration only on light backgrounds, as text only on navy (mintOnDark). Colours become CSS variables (src/lib/theme.ts) and the ClinicFlow white-label theme tokens (npm run tenant). Run `npm run contrast` after any change. iconTop is only the top of the app-icon tile gradient (iconTop to primary, `npm run brand`).",
   "colors": {
     "primary": "#5A3EB8",
+    "iconTop": "#6B52CC",
     "primaryHover": "#4B329E",
     "primaryDeep": "#3A2580",
     "navy": "#1D1934",

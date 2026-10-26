@@ -103,7 +103,7 @@ export const BrandSchema = z.object({
   status: Status,
   _note: Note,
   colors: z.object({
-    primary: hex, primaryHover: hex, primaryDeep: hex, navy: hex, navySoft: hex, tint: hex, mint: hex, mintSoft: hex,
+    primary: hex, iconTop: hex, primaryHover: hex, primaryDeep: hex, navy: hex, navySoft: hex, tint: hex, mint: hex, mintSoft: hex,
     cta: hex, ctaHover: hex, ctaInk: hex, background: hex, surface: hex, surfaceAlt: hex, text: hex, textSecondary: hex,
     border: hex, onDark: hex, onDarkMuted: hex, mintOnDark: hex, success: hex, warning: hex, warningText: hex, warningSoft: hex,
     whatsapp: hex,
