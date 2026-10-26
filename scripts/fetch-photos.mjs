@@ -14,9 +14,12 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace
 // Clinic's own photos: images/<file> → [output file, description, optional crop]. Never upscaled. A crop
 // ({ left, top, width, height }) cuts one source into several shots, e.g. to leave out a printed name label.
 const OWN = {
-  'dr-aishwarya.png': ['doctor-aishwarya-wide.jpg', 'Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror', { left: 0, top: 0, width: 593, height: 268 }],
+  'dr-aishwarya.png': ['doctor-aishwarya-wide.jpg', 'Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror', { left: 0, top: 0, width: 2108, height: 950 }],
+  'clinic-interior-5.png': ['clinic-operatory-glow.jpg', 'Treatment room with a dental chair and the clinic’s glowing tooth logo on the marble wall'],
   'clinic-interior-1.png': ['clinic-operatory.jpg', 'Treatment room with two dental chairs under a curved, back-lit ceiling'],
+  'clinic-interior-4.png': ['clinic-operatory-2.jpg', 'Second treatment room with a back-lit ceiling and marble walls', { left: 183, top: 0, width: 1618, height: 1082 }],
   'clinic-interior-2.png': ['clinic-reception.jpg', 'Reception desk and waiting sofas, with the clinic logo on the walnut panel'],
+  'clinic-interior-6.png': ['clinic-waiting.jpg', 'Waiting area with sofas beside the marble reception desk'],
   'clinic-interior-3.png': ['clinic-corridor.jpg', 'Corridor leading to the operatories, lit by ceiling light lines'],
   'clinic-exterior-1.png': ['clinic-exterior.jpg', 'Clinic frontage and signboard on Sai Baba Road, Vidyanagar'],
 };
@@ -53,11 +56,11 @@ fs.mkdirSync(outDir, { recursive: true });
 const credits = STOCK ? {} : JSON.parse(fs.readFileSync(creditsFile, 'utf8')).photos;
 const own = {};
 
-const OWN_EXTRA = [['dr-aishwarya.png', 'doctor-aishwarya-portrait.jpg', 'Portrait of Dr. Aishwarya P', { left: 30, top: 0, width: 310, height: 323 }]];
+const OWN_EXTRA = [['dr-aishwarya.png', 'doctor-aishwarya-portrait.jpg', 'Portrait of Dr. Aishwarya P', { left: 107, top: 0, width: 1102, height: 1150 }]];
 for (const [src, file, description, crop] of [...Object.entries(OWN).map(([k, v]) => [k, ...v]), ...OWN_EXTRA]) {
   // PNGs with alpha are flattened on white (the supplied photos carry an opaque alpha channel).
   const img = sharp(path.join(root, 'images', src)).rotate();
-  await (crop ? img.extract(crop) : img).flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true }).toFile(path.join(outDir, file));
+  await (crop ? img.extract(crop) : img).resize({ width: 1920, withoutEnlargement: true }).flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true }).toFile(path.join(outDir, file));
   own[file] = { source: `images/${src}`, description };
   console.log(file, '(clinic)');
 }

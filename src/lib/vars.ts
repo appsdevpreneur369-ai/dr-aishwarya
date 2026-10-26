@@ -23,7 +23,7 @@ export const VARS: Record<string, string> = {
   todayHours: openDay ? formatSessions(openDay.sessions) : '',
   area: siteClinic.address.locality,
   address: fullAddress,
-  googleRating: siteClinic.google ? siteClinic.google.rating.toFixed(1) : '',
+  googleRating: siteClinic.google?.rating ? siteClinic.google.rating.toFixed(1) : '',
   googleReviews: siteClinic.google ? String(siteClinic.google.reviewCount) : '',
   googleChecked: siteClinic.google
     ? new Date(`${siteClinic.google.checkedOn}T00:00:00Z`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })

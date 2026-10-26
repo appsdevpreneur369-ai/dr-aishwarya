@@ -12,6 +12,8 @@ const nextConfig = {
   // Separate build folders for test variants (e.g. NEXT_DIST_DIR=.next-e2e); default .next.
   distDir: process.env.NEXT_DIST_DIR || '.next',
   poweredByHeader: false,
+  // Optional cap on static-generation workers for low-memory machines (e.g. NEXT_BUILD_CPUS=1 locally). Unset = Next default.
+  ...(process.env.NEXT_BUILD_CPUS ? { experimental: { cpus: Number(process.env.NEXT_BUILD_CPUS) } } : {}),
   // No runtime image resizing: the optimiser hung on some photos at some widths (local QA, 30 Sep 2026).
   // WebP variants are pre-generated at build (scripts/build-image-variants.mjs) and served by a custom loader.
   images: {

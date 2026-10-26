@@ -5,13 +5,25 @@
       "source": "images/dr-aishwarya.png",
       "description": "Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror"
     },
+    "clinic-operatory-glow.jpg": {
+      "source": "images/clinic-interior-5.png",
+      "description": "Treatment room with a dental chair and the clinic’s glowing tooth logo on the marble wall"
+    },
     "clinic-operatory.jpg": {
       "source": "images/clinic-interior-1.png",
       "description": "Treatment room with two dental chairs under a curved, back-lit ceiling"
     },
+    "clinic-operatory-2.jpg": {
+      "source": "images/clinic-interior-4.png",
+      "description": "Second treatment room with a back-lit ceiling and marble walls"
+    },
     "clinic-reception.jpg": {
       "source": "images/clinic-interior-2.png",
       "description": "Reception desk and waiting sofas, with the clinic logo on the walnut panel"
+    },
+    "clinic-waiting.jpg": {
+      "source": "images/clinic-interior-6.png",
+      "description": "Waiting area with sofas beside the marble reception desk"
     },
     "clinic-corridor.jpg": {
       "source": "images/clinic-interior-3.png",

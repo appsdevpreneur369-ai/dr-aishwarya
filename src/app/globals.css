@@ -9,6 +9,8 @@
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
+    /* No grey/blue tap rectangle on phones (owner saw it on nav items). Focus is shown by our own styles. */
+    -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
   }
@@ -50,7 +52,10 @@
   .card { @apply rounded-brand border border-border bg-surface; }
   .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-[10px] px-5 py-3 font-body text-[0.98rem] font-bold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60; }
   /* Main call to action = brand violet with white text (8.0:1). */
-  .btn-cta { @apply btn bg-primary text-onDark hover:bg-primaryHover; }
+  .btn-cta { @apply btn relative overflow-hidden bg-primary text-onDark shadow-glow hover:bg-primaryHover; }
+  /* Slow light sweep across the main button (transform-only, composited; off for reduced motion). */
+  .btn-cta::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / .28) 50%, transparent 65%); transform: translateX(-120%); animation: sweep 5.5s ease-in-out 2s infinite; pointer-events: none; }
+  @keyframes sweep { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
   .btn-primary { @apply btn bg-primary text-onDark hover:bg-primaryHover; }
   .btn-ghost { @apply btn border border-primary/35 bg-surface text-primaryDeep hover:border-primary hover:bg-tint; }
   .btn-dark-ghost { @apply btn border border-onDark/40 text-onDark hover:border-onDark hover:bg-onDark/10; }
@@ -63,7 +68,12 @@
   /* Header navigation: plain text links; hover and the current page get a 2px underline in the brand colour. */
   .nav-link { @apply relative inline-flex h-[72px] items-center whitespace-nowrap px-3 text-[0.97rem] font-semibold text-text transition-colors hover:text-primary; }
   .nav-link::after { content: ''; @apply absolute inset-x-3 bottom-0 h-0.5 scale-x-0 bg-primary transition-transform duration-200; }
-  .nav-link:hover::after, .nav-link[aria-current='page']::after { @apply scale-x-100; }
+  .nav-link:hover::after, .nav-link:focus-visible::after, .nav-link[aria-current='page']::after { @apply scale-x-100; }
+  /* No box or rounded outline on nav items: keyboard focus shows the underline (thicker) + brand colour instead. */
+  .nav-link:focus, .nav-link:focus-visible, .mobile-nav-link:focus, .mobile-nav-link:focus-visible { outline: none; }
+  .nav-link:focus-visible { @apply text-primary; }
+  .nav-link:focus-visible::after { @apply h-[3px]; }
+  .mobile-nav-link:focus-visible { @apply text-primary underline decoration-2 underline-offset-4; }
   .nav-link[aria-current='page'] { @apply text-primary; }
   .mobile-nav-link { @apply flex min-h-[56px] items-center justify-between border-b border-border px-1 font-heading text-lg font-semibold text-text hover:text-primary; }
   .mobile-nav-link[aria-current='page'] { @apply text-primary; }
@@ -89,6 +99,11 @@
   /* Quiet background washes (pure CSS). */
   .bg-waves { background-image: radial-gradient(80% 60% at 100% 0%, rgb(var(--c-primary) / 0.22), transparent 70%); }
   .bg-hero { background-image: linear-gradient(180deg, rgb(var(--c-tint)) 0%, rgb(var(--c-background)) 100%); }
+  /* Home hero: clinic photo under a violet-ink veil, darkest behind the text (AA for white text everywhere it sits). */
+  .hero-veil { background: linear-gradient(90deg, rgb(var(--c-navy) / .94) 0%, rgb(var(--c-navy) / .84) 40%, rgb(var(--c-primaryDeep) / .42) 66%, rgb(var(--c-primaryDeep) / .12) 100%); }
+  /* Phones: the room shows clearly in the top band (no text there), then the veil deepens behind the text. */
+  .hero-veil-mobile { background: linear-gradient(180deg, rgb(var(--c-navy) / .1) 0%, rgb(var(--c-navy) / .35) 45%, rgb(var(--c-navy) / .92) 78%, rgb(var(--c-navy)) 100%); }
+  .glass-dark { background: rgb(255 255 255 / .08); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgb(255 255 255 / .14); }
   .bg-grid { background-image: none; }
   .text-balance { text-wrap: balance; }
   .italic-accent { font-style: normal; }

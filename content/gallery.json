@@ -1,18 +1,77 @@
 {
   "_note": "Gallery. clinic-* are the clinic's OWN photos (supplied 25 Oct 2026): captioned plainly, and the only ones that may appear in gallery JSON-LD. Everything else is a representative stock photo, captioned as such, with Indian faces. Never present stock images as the clinic's own rooms or staff.",
   "status": "placeholder",
-  "intro": "The first four photos are our own clinic in Vidyanagar. The rest are representative images until we add more of our own.",
-  "categories": ["Clinic", "Care", "Smiles"],
+  "intro": "The first seven photos are our own clinic in Vidyanagar. The rest are representative images.",
+  "categories": [
+    "Clinic",
+    "Care",
+    "Smiles"
+  ],
   "items": [
-    { "image": "clinic-operatory", "caption": "Our treatment room", "category": "Clinic" },
-    { "image": "clinic-reception", "caption": "Reception and waiting area", "category": "Clinic" },
-    { "image": "clinic-corridor", "caption": "The corridor to our operatories", "category": "Clinic" },
-    { "image": "clinic-exterior", "caption": "Our clinic front on Sai Baba Road", "category": "Clinic" },
-    { "image": "smile-grandparents", "caption": "Healthy gums at every age (representative photo)", "category": "Smiles" },
-    { "image": "treat-gums", "caption": "Gum health check (representative photo)", "category": "Care" },
-    { "image": "smile-young-woman", "caption": "A confident smile (representative photo)", "category": "Smiles" },
-    { "image": "treat-implants", "caption": "Planning an implant (representative photo)", "category": "Care" },
-    { "image": "smile-elder", "caption": "Teeth that last (representative photo)", "category": "Smiles" },
-    { "image": "smile-family", "caption": "Care for the whole family (representative photo)", "category": "Smiles" }
+    {
+      "image": "clinic-operatory-glow",
+      "caption": "Treatment room with our tooth logo",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-operatory",
+      "caption": "Our twin-chair treatment room",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-operatory-2",
+      "caption": "Second treatment room",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-reception",
+      "caption": "Reception and waiting area",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-waiting",
+      "caption": "Waiting lounge",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-corridor",
+      "caption": "The corridor to our operatories",
+      "category": "Clinic"
+    },
+    {
+      "image": "clinic-exterior",
+      "caption": "Our clinic front on Sai Baba Road",
+      "category": "Clinic"
+    },
+    {
+      "image": "smile-grandparents",
+      "caption": "Healthy gums at every age (representative photo)",
+      "category": "Smiles"
+    },
+    {
+      "image": "treat-gums",
+      "caption": "Gum health check (representative photo)",
+      "category": "Care"
+    },
+    {
+      "image": "smile-young-woman",
+      "caption": "A confident smile (representative photo)",
+      "category": "Smiles"
+    },
+    {
+      "image": "treat-implants",
+      "caption": "Planning an implant (representative photo)",
+      "category": "Care"
+    },
+    {
+      "image": "smile-elder",
+      "caption": "Teeth that last (representative photo)",
+      "category": "Smiles"
+    },
+    {
+      "image": "smile-family",
+      "caption": "Care for the whole family (representative photo)",
+      "category": "Smiles"
+    }
   ]
 }

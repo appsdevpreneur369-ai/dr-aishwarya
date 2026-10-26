@@ -3,6 +3,8 @@
 Updated 25 Oct 2026. Swap steps for every clinic item: `docs/EDITING.md` → "One-edit swaps".
 
 ## From the clinic (shown as Draft / placeholder until received)
+- [ ] **Google star rating**: the site shows "27 Google reviews" (account owner, 26 Oct 2026) and links to her Google listing; stars appear once the real rating is copied into `clinic.json` `google.rating` (with `checkedOn`). Optional: 3–6 review quotes copied VERBATIM with the reviewer's name and date into `google.reviews`.
+- [ ] **Live Google reviews (optional, needs the owner's OK: paid Google API on the GCP project)**: enable the Places API (New), create an API key restricted to it, set `GOOGLE_PLACES_API_KEY` on `adc-frontend-staging` (Cloud Run env/secret) and `google.placeId`. The site then shows the live rating, count and latest reviews (refreshed daily). The same Place ID also gives the review link: `https://search.google.com/local/writereview?placeid=<id>`.
 - [ ] **Google "write a review" link**: Place ID via Google's Place ID Finder → `clinic.json` `googleReview.writeReviewUrl`. Until then the tenant file sends `googleReviewLink: null` (core creates **no** review rows); staging demo uses the Google search panel stand-in (`--demo-review-link`).
 - [ ] **24×7 emergency line**: Dr. Aishwarya to confirm (who answers at night; phone advice only or night visits). `emergency.json` `availability`.
 - [ ] Google Maps place link + pin (`clinic.json` `maps`): map and directions are approximate (address search).

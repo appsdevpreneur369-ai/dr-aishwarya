@@ -1,6 +1,6 @@
 {
   "status": "placeholder",
-  "headerImage": "clinic-operatory",
+  "headerImage": "clinic-operatory-2",
   "story": {
     "title": "Why we start with the gums",
     "paragraphs": [
@@ -8,7 +8,7 @@
       "Dr. Aishwarya P sees each patient herself. She combines her MDS in Periodontics and Implantology with a fellowship in laser dentistry, so gum problems, missing teeth and everyday dental needs are handled under one roof in Vidyanagar.",
       "We keep things straightforward: a careful examination, a clear explanation and a written plan with the number of visits and the fee. Treatment begins only when you are ready."
     ],
-    "image": "clinic-corridor"
+    "image": "clinic-reception"
   },
   "clinicHead": {
     "eyebrow": "Clinic head",

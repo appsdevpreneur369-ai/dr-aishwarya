@@ -66,8 +66,13 @@ describe('content schema', () => {
     }
   });
 
-  it('no Google rating is shown until one is copied by hand, and none is ever emitted as aggregateRating JSON-LD', () => {
-    expect(read('clinic.json').google).toBeUndefined();
+  it('Google reviews: 27 from the account owner, rating null until copied, verbatim quotes only, never aggregateRating JSON-LD', () => {
+    const g = read('clinic.json').google;
+    expect(g.reviewCount).toBe(27);
+    expect(g.rating).toBeNull();
+    expect(g.url).toMatch(/^https:\/\/www\.google\./);
+    for (const r of g.reviews) expect(r.author.length && r.text.length && r.when.length).toBeTruthy();
+    expect(fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'google-reviews.ts'), 'utf8')).not.toMatch(/process.env.NEXT_PUBLIC/);
     expect(fs.readFileSync(path.join(__dirname, '..', 'src', 'lib', 'jsonld.ts'), 'utf8')).not.toMatch(/aggregateRating/);
   });
 

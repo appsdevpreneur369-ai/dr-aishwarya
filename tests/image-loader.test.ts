@@ -7,7 +7,7 @@ import { IMAGE_WIDTHS } from '@/lib/image-widths.mjs';
 describe('image loader (pre-generated variants, no runtime resizing)', () => {
   it('maps a photo and requested width to the next variant up', () => {
     expect(imageLoader({ src: '/images/photos/hero.jpg', width: 600 })).toBe('/images/opt/hero-640.webp');
-    expect(imageLoader({ src: '/images/photos/hero.jpg', width: 3840 })).toBe('/images/opt/hero-1200.webp');
+    expect(imageLoader({ src: '/images/photos/hero.jpg', width: 3840 })).toBe('/images/opt/hero-1920.webp');
     expect(imageLoader({ src: '/brand/logo-mark.png', width: 64 })).toBe('/images/opt/logo-mark-64.webp');
   });
   it('passes other URLs through unchanged', () => {

@@ -2,10 +2,10 @@
   "status": "placeholder",
   "hero": {
     "badge": "Vidyanagar, Guntur · Gum & Implant Specialist",
-    "titleLine1": "Strong gums, lasting teeth,",
-    "titleLine2": "a smile built to last.",
+    "titleLine1": "Strong gums. Lasting teeth.",
+    "titleLine2": "A smile built to last.",
     "lead": "Dr. Aishwarya P is a periodontist and implantologist with a fellowship in laser dentistry. From bleeding gums to a full set of implants, you get a specialist's plan, explained clearly before treatment begins.",
-    "image": "doctor-aishwarya-wide",
+    "image": "clinic-operatory-glow",
     "primaryCta": "Book a consultation",
     "secondaryCta": {
       "label": "Explore treatments",
@@ -212,5 +212,110 @@
     "_note": "Only real, consented patient photos: none yet.",
     "status": "placeholder",
     "items": []
+  },
+  "smileMap": {
+    "eyebrow": "Tap where it hurts",
+    "title": "Show us what is bothering you",
+    "lead": "Tap the part of your smile that worries you. The booking form opens with your concern already filled in.",
+    "spots": [
+      {
+        "problem": "bleeding-gums",
+        "label": "Gums bleed or look swollen",
+        "x": 50,
+        "y": 15
+      },
+      {
+        "problem": "smile-makeover",
+        "label": "Front teeth: colour or shape",
+        "x": 46,
+        "y": 30
+      },
+      {
+        "problem": "toothache",
+        "label": "Toothache in a back tooth",
+        "x": 17,
+        "y": 35
+      },
+      {
+        "problem": "missing-teeth",
+        "label": "A missing tooth",
+        "x": 83,
+        "y": 34
+      },
+      {
+        "problem": "wisdom-tooth",
+        "label": "Pain behind the last tooth",
+        "x": 19,
+        "y": 63
+      },
+      {
+        "problem": "crooked-teeth",
+        "label": "Crooked or gapped teeth",
+        "x": 60,
+        "y": 68
+      }
+    ]
+  },
+  "journey": {
+    "eyebrow": "Implant centre",
+    "title": "Your implant journey, step by step",
+    "lead": "A missing tooth replaced with one that is anchored in bone. Here is what a typical single implant looks like at our clinic.",
+    "steps": [
+      {
+        "title": "Consultation and planning",
+        "time": "Day 1",
+        "text": "Gums, bone and bite are checked; X-rays or a 3D scan show where the implant should sit. You get the plan and the cost in writing."
+      },
+      {
+        "title": "Implant placement",
+        "time": "Usually 1 visit",
+        "text": "The titanium root is placed under local anaesthetic. Many people return to their usual routine the next day."
+      },
+      {
+        "title": "Healing",
+        "time": "Usually a few months",
+        "text": "Bone grows firmly around the implant. A temporary tooth can fill the gap meanwhile."
+      },
+      {
+        "title": "Your new tooth",
+        "time": "1–2 visits",
+        "text": "A custom crown is fixed on top, shaded to match your smile, and checked for a comfortable bite."
+      }
+    ]
+  },
+  "afterVisit": {
+    "eyebrow": "Cared for after you leave",
+    "title": "We stay in touch, so you never miss a step",
+    "lead": "Your booking, your reminder and a quick check-in after the visit arrive on WhatsApp automatically, in our clinic’s name.",
+    "note": "Example messages. Exact wording follows the clinic’s approved WhatsApp templates; no medical details are ever sent.",
+    "messages": [
+      {
+        "when": "When you book",
+        "text": "Hi Kavya, your appointment with Dr. Aishwarya P at Aishwarya Dental Clinic and Implant Centre is confirmed for Tue, 10:15 AM."
+      },
+      {
+        "when": "Before your visit",
+        "text": "Reminder: you are seeing Dr. Aishwarya P today at 10:15 AM. See you soon!"
+      },
+      {
+        "when": "After your visit",
+        "text": "Hi Kavya, thank you for visiting Aishwarya Dental Clinic and Implant Centre and choosing Dr. Aishwarya P. We hope you had a good experience. We appreciate your trust in us."
+      },
+      {
+        "when": "The next day",
+        "text": "Hi Kavya, we would really appreciate your honest feedback about your experience at Aishwarya Dental Clinic and Implant Centre. Share your experience here: g.co/r/…"
+      }
+    ],
+    "points": [
+      "Booking confirmation in seconds",
+      "Reminder before every visit",
+      "A thank-you after treatment",
+      "Your prescriptions and plans in your patient account"
+    ]
+  },
+  "tour": {
+    "eyebrow": "Step inside",
+    "title": "A calm, modern clinic in Vidyanagar",
+    "lead": "Back-lit treatment rooms, sterile instrument care and a quiet waiting lounge. Swipe through, tap to enlarge."
   }
 }

@@ -3,20 +3,21 @@ import Link from 'next/link';
 import { BookButton } from '@/components/booking/BookButton';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Icon } from '@/components/ui/Icon';
+import { GoogleBadge } from '@/components/sections/GoogleReviews';
 import { Avatar, DraftBadge, SectionHead } from '@/components/ui/primitives';
-import { getImage, headDoctor, siteAbout, siteClinic, sitePages, sitePlan } from '@/lib/content';
+import { getImage, headDoctor, siteAbout, sitePages, sitePlan } from '@/lib/content';
 import { patientBenefits } from '@/lib/plan';
+import { getGoogleReviews } from '@/lib/google-reviews';
 import { pageMetadata } from '@/lib/seo';
-import { VARS } from '@/lib/vars';
 
 const p = sitePages.about;
 export const metadata = pageMetadata({ path: '/about', title: p.title, description: p.description });
 
-export default function AboutPage() {
+export default async function AboutPage() {
   const a = siteAbout;
   const headPhoto = headDoctor.photo ? getImage(headDoctor.photo) : null;
   const story = getImage(a.story.image);
-  const google = siteClinic.google;
+  const google = await getGoogleReviews();
   return (
     <>
       <PageHeader title={p.h1!} intro={p.intro} image={getImage(a.headerImage)} imageLayout="wide" crumbs={[{ name: 'About', path: '/about' }]} badge={<DraftBadge status={a.status} />} />
@@ -104,18 +105,11 @@ export default function AboutPage() {
             <p className="mt-2 text-textSecondary">{a.team.lead}</p>
           </div>
           {google && (
-            <a href={google.url} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 rounded-brand border border-border bg-surface p-8 shadow-soft transition-shadow hover:shadow-lift">
-              <span className="font-heading text-6xl text-navy">{VARS.googleRating}</span>
-              <span>
-                <span className="block text-lg font-semibold">Rated by patients on Google</span>
-                <span className="block text-textSecondary">
-                  {google.reviewCount} reviews · checked {VARS.googleChecked}
-                </span>
-                <span className="mt-2 inline-flex items-center gap-1 font-bold text-primary group-hover:underline">
-                  Read the reviews <Icon name="arrow-up-right" className="h-4 w-4" />
-                </span>
-              </span>
-            </a>
+            <div className="card flex flex-col justify-center gap-4 p-8">
+              <p className="text-lg font-semibold">What patients say on Google</p>
+              <p className="text-textSecondary">Unedited reviews from our patients, published on Google.</p>
+              <GoogleBadge g={google} className="w-fit border border-border" />
+            </div>
           )}
         </div>
       </section>

@@ -1,9 +1,15 @@
 {
   "_note": "Clinic identity and contact details. Every field carries its own status. 'approved' = supplied by the account owner on 25 Oct 2026 (name, address, phone/WhatsApp, hours). A contact field with status 'placeholder' is never turned into a link: its buttons are hidden, it is left out of JSON-LD, and WhatsApp booking is disabled (see src/lib/contact.ts). Edit guide: docs/EDITING.md.",
-  "name": { "value": "Aishwarya Dental Clinic and Implant Centre", "status": "approved" },
+  "name": {
+    "value": "Aishwarya Dental Clinic and Implant Centre",
+    "status": "approved"
+  },
   "shortName": "Aishwarya Dental",
   "slug": "aishwarya-dental-clinic",
-  "tagline": { "value": "Gum, implant and laser dentistry in Vidyanagar, Guntur", "status": "placeholder" },
+  "tagline": {
+    "value": "Gum, implant and laser dentistry in Vidyanagar, Guntur",
+    "status": "placeholder"
+  },
   "description": {
     "value": "Aishwarya Dental Clinic and Implant Centre in Vidyanagar, Guntur, is run by Dr. Aishwarya P, a periodontist and implantologist (MDS) with a fellowship in laser dentistry.",
     "status": "approved"
@@ -44,13 +50,64 @@
     "sessionsStatus": "approved",
     "daysStatus": "approved",
     "days": [
-      { "day": "monday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "tuesday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "wednesday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "thursday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "friday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "saturday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
-      { "day": "sunday", "sessions": [] }
+      {
+        "day": "monday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "sessions": [
+          {
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "sunday",
+        "sessions": []
+      }
     ]
   },
   "maps": {
@@ -61,14 +118,29 @@
     "embedUrl": "",
     "geo": null,
     "wayfinding": [
-      { "icon": "navigation", "text": "Come to Vidyanagar and take Sai Baba Road." },
-      { "icon": "map-pin", "text": "Look for EMGEE House: the clinic is directly opposite, at door number 4-5-57." },
-      { "icon": "arrow-up-right", "text": "The walnut-brown signboard reads 'Aishwarya Dental Clinic & Implant Centre'." }
+      {
+        "icon": "navigation",
+        "text": "Come to Vidyanagar and take Sai Baba Road."
+      },
+      {
+        "icon": "map-pin",
+        "text": "Look for EMGEE House: the clinic is directly opposite, at door number 4-5-57."
+      },
+      {
+        "icon": "arrow-up-right",
+        "text": "The walnut-brown signboard reads 'Aishwarya Dental Clinic & Implant Centre'."
+      }
     ]
   },
   "areaServed": {
     "status": "placeholder",
-    "places": ["Vidyanagar", "Brodipet", "Arundelpet", "Lakshmipuram", "Guntur"]
+    "places": [
+      "Vidyanagar",
+      "Brodipet",
+      "Arundelpet",
+      "Lakshmipuram",
+      "Guntur"
+    ]
   },
   "foundingNote": {
     "status": "placeholder",
@@ -79,5 +151,16 @@
     "_note": "The 'write a review' link patients receive in the review request (ClinicFlow googleReviewLink). ONE edit to go live: paste https://search.google.com/local/writereview?placeid=<PLACE_ID> (Place ID from Google's free Place ID Finder) or https://g.page/r/<code>/review into writeReviewUrl and set status 'approved'; then run `npm run tenant`. While placeholder, the tenant file sends null. stagingDemoUrl is the clinic's Google search panel supplied by the account owner: used ONLY by scripts/staging/setup-staging.py --demo-review-link so the review request can be shown on staging; never production.",
     "writeReviewUrl": "",
     "stagingDemoUrl": "https://www.google.com/search?kgmid=/g/11wwrmhfw9&q=Aishwarya+Dental+Clinic+and+Implant+Centre"
+  },
+  "google": {
+    "status": "approved",
+    "_note": "Public Google reviews. reviewCount 27 supplied by the account owner on 26 Oct 2026 (checkedOn). rating is NULL until someone copies the real star rating from her Google listing: the site then shows stars; until then it shows the count only. reviews = optional VERBATIM quotes copied from Google with the reviewer name and the date Google shows (never edited, never invented). url opens her Google listing where the reviews are. LIVE MODE: set GOOGLE_PLACES_API_KEY (server-side env, never NEXT_PUBLIC) and placeId, and src/lib/google-reviews.ts fetches rating, count and the latest reviews from the Google Places API once a day; these hand-copied values are the fallback. Never emitted as aggregateRating JSON-LD.",
+    "rating": null,
+    "reviewCount": 27,
+    "checkedOn": "2026-10-26",
+    "url": "https://www.google.com/search?kgmid=/g/11wwrmhfw9&q=Aishwarya+Dental+Clinic+and+Implant+Centre",
+    "placeId": "",
+    "reviewTopics": [],
+    "reviews": []
   }
 }

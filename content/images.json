@@ -23,33 +23,55 @@
     },
     "doctor-aishwarya-portrait": {
       "src": "/images/photos/doctor-aishwarya-portrait.jpg",
-      "width": 310,
-      "height": 323,
+      "width": 1102,
+      "height": 1150,
       "alt": "Dr. Aishwarya P, periodontist and implantologist, at her clinic",
       "status": "approved",
       "objectPosition": "50% 30%"
     },
     "doctor-aishwarya-wide": {
       "src": "/images/photos/doctor-aishwarya-wide.jpg",
-      "width": 593,
-      "height": 268,
+      "width": 1920,
+      "height": 865,
       "alt": "Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror",
       "status": "approved",
       "objectPosition": "30% 40%"
     },
+    "clinic-operatory-glow": {
+      "src": "/images/photos/clinic-operatory-glow.jpg",
+      "width": 1645,
+      "height": 1082,
+      "alt": "Treatment room at Aishwarya Dental Clinic with a dental chair and the clinic’s glowing tooth logo on the marble wall",
+      "status": "approved",
+      "objectPosition": "55% 45%"
+    },
     "clinic-operatory": {
       "src": "/images/photos/clinic-operatory.jpg",
-      "width": 680,
-      "height": 510,
+      "width": 1440,
+      "height": 1082,
       "alt": "Treatment room at Aishwarya Dental Clinic with two dental chairs under a curved, back-lit ceiling",
       "status": "approved",
-      "objectPosition": "50% 60%"
+      "objectPosition": "50% 55%"
+    },
+    "clinic-operatory-2": {
+      "src": "/images/photos/clinic-operatory-2.jpg",
+      "width": 1618,
+      "height": 1082,
+      "alt": "Second treatment room at Aishwarya Dental Clinic with a back-lit ceiling and marble walls",
+      "status": "approved"
     },
     "clinic-reception": {
       "src": "/images/photos/clinic-reception.jpg",
+      "width": 1658,
+      "height": 1082,
+      "alt": "Reception desk and waiting sofas at Aishwarya Dental Clinic, with the clinic’s tooth logo on a walnut panel",
+      "status": "approved"
+    },
+    "clinic-waiting": {
+      "src": "/images/photos/clinic-waiting.jpg",
       "width": 680,
-      "height": 442,
-      "alt": "Reception desk and waiting sofas at Aishwarya Dental Clinic, with the clinic's tooth logo on a walnut panel",
+      "height": 451,
+      "alt": "Waiting area at Aishwarya Dental Clinic beside the marble reception desk",
       "status": "approved"
     },
     "clinic-corridor": {

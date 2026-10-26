@@ -31,7 +31,7 @@ const active = (page) => page.evaluate(() => {
   for (let i = 0; i < 40 && !found; i++) {
     await page.keyboard.press('Tab');
     a = await active(page);
-    if (a.text === 'Book Appointment' && !a.inDialog) found = true;
+    if (/^book appointment$/i.test(a.text) && !a.inDialog) found = true;
   }
   check('header "Book Appointment" reachable by Tab with visible focus', found && a.outline, JSON.stringify(a));
   await page.keyboard.press('Enter');
@@ -51,7 +51,7 @@ const active = (page) => page.evaluate(() => {
   await wait(300);
   const open = await page.$('[role=dialog]');
   a = await active(page);
-  check('Esc closes dialog and focus returns to the opener', !open && a.text === 'Book Appointment', JSON.stringify(a));
+  check('Esc closes dialog and focus returns to the opener', !open && /^book appointment$/i.test(a.text), JSON.stringify(a));
   // FAQ accordion by keyboard
   await page.goto(`${base}/faqs`, { waitUntil: 'load' });
   await page.focus('summary');

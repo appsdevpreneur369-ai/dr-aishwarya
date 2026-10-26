@@ -79,16 +79,22 @@ export const ClinicSchema = z.object({
       (g) => g.status !== 'approved' || /^https:\/\/(search\.google\.com\/local\/writereview\?placeid=[\w-]+|g\.page\/r\/[\w-]+\/review)$/.test(g.writeReviewUrl),
       { message: 'an approved review link must be https://search.google.com/local/writereview?placeid=… or https://g.page/r/…/review', path: ['writeReviewUrl'] },
     ),
-  /** Public Google rating, hand-copied with a date. Displayed only; never emitted as aggregateRating JSON-LD. */
+  /**
+   * Public Google reviews, hand-copied with a date (or fetched live from the Places API when a key is configured,
+   * src/lib/google-reviews.ts). Displayed with Google attribution only; never emitted as aggregateRating JSON-LD.
+   * rating stays null until someone copies the real figure; reviews are verbatim quotes with the reviewer's name.
+   */
   google: z
     .object({
       status: Status,
       _note: Note,
-      rating: z.number().min(1).max(5),
+      rating: z.number().min(1).max(5).nullable(),
       reviewCount: z.number().int().nonnegative(),
       checkedOn: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-      url: z.string().url(),
+      url: z.string().url().startsWith('https://www.google.'),
+      placeId: z.string(),
       reviewTopics: z.array(z.string()),
+      reviews: z.array(z.object({ author: z.string().min(1), rating: z.number().int().min(1).max(5), text: z.string().min(1), when: z.string().min(1) })),
     })
     .optional(),
 });
@@ -263,6 +269,12 @@ export const HomeSchema = z.object({
   visit: Head,
   cta: z.object({ title: z.string(), lead: z.string(), button: z.string() }),
   beforeAfter: z.object({ _note: Note, status: Status, items: z.array(z.object({ before: z.string(), after: z.string(), caption: z.string(), consent: z.literal(true) })) }),
+  /** "Tap where it hurts": hotspots on the smile diagram (x/y in % of the drawing), each opening booking for a routing problem. */
+  smileMap: Head.extend({ spots: z.array(z.object({ problem: slug, label: z.string().min(1), x: z.number().min(0).max(100), y: z.number().min(0).max(100) })).min(1) }),
+  journey: Head.extend({ steps: z.array(z.object({ title: z.string(), time: z.string(), text: z.string() })).min(2) }),
+  /** Example WhatsApp messages (phone mock-up). Must stay labelled as examples (note). */
+  afterVisit: Head.extend({ note: z.string().min(1), messages: z.array(z.object({ when: z.string(), text: z.string() })).min(1), points: z.array(z.string()) }),
+  tour: Head,
 });
 
 export const AboutSchema = z.object({
