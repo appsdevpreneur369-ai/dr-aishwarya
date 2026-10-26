@@ -1,0 +1,16 @@
+{
+  "_note": "General questions (/faqs). 'home: true' also shows the question on the home page. {{tokens}} are filled from content (src/lib/vars.ts).",
+  "status": "placeholder",
+  "items": [
+    { "q": "When is the clinic open?", "a": "We are open {{hoursSummary}}. For a dental emergency outside these hours, call our emergency line on the clinic number.", "home": true },
+    { "q": "How do I find the clinic?", "a": "We are at {{address}}. Search for Aishwarya Dental Clinic in Google Maps or tap 'Get directions' on the contact page.", "home": true },
+    { "q": "What does a periodontist do?", "a": "A periodontist is a dentist who has trained further, at master's level, in gum health and in the jawbone that anchors each tooth. They treat gum disease, loose teeth and receding gums, and place dental implants.", "home": true },
+    { "q": "Will I know the cost before treatment?", "a": "Yes. After the examination Dr. Aishwarya explains your options, the usual number of visits and the fee for each before anything begins.", "home": true },
+    { "q": "Do I need an appointment?", "a": "An appointment means you are seen at a set time with little waiting. Walk-ins are welcome, and we will see you as soon as a chair is free." },
+    { "q": "Do you treat children?", "a": "Yes, children are welcome for check-ups and simple treatment. First visits are kept short and friendly." },
+    { "q": "I am anxious about dental treatment. Can you help?", "a": "Please tell us when you book. We explain each step, agree a signal for you to pause, and use local anaesthetic or laser options where they suit the treatment." },
+    { "q": "What should I bring to my first visit?", "a": "A list of your current medicines, any recent dental X-rays or reports, and your mobile phone for the booking code." },
+    { "q": "How do I reschedule or cancel?", "a": "Sign in to your patient account, or call the clinic. Telling us early lets another patient take the slot." },
+    { "q": "Will I get messages after my visit?", "a": "With your consent you receive a short thank-you after the visit and, the next day, an invitation to share honest feedback on Google. You can opt out at any time." }
+  ]
+}

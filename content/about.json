@@ -1,0 +1,35 @@
+{
+  "status": "placeholder",
+  "headerImage": "clinic-operatory",
+  "story": {
+    "title": "Why we start with the gums",
+    "paragraphs": [
+      "Most people visit a dentist about a tooth. Yet whether that tooth lasts usually depends on what holds it: the gum and the bone beneath. Aishwarya Dental Clinic and Implant Centre was built around that idea, with a periodontist and implantologist leading every treatment plan.",
+      "Dr. Aishwarya P sees each patient herself. She combines her MDS in Periodontics and Implantology with a fellowship in laser dentistry, so gum problems, missing teeth and everyday dental needs are handled under one roof in Vidyanagar.",
+      "We keep things straightforward: a careful examination, a clear explanation and a written plan with the number of visits and the fee. Treatment begins only when you are ready."
+    ],
+    "image": "clinic-corridor"
+  },
+  "clinicHead": {
+    "eyebrow": "Clinic head",
+    "title": "Dr. Aishwarya P, MDS",
+    "lead": "Periodontist and implantologist with a fellowship in laser dentistry, and the dentist you will see at every visit.",
+    "bookLabel": "Book with Dr. Aishwarya",
+    "profileLabel": "View her profile"
+  },
+  "values": {
+    "title": "How we work",
+    "items": [
+      { "icon": "message-circle", "title": "Explain, then treat", "text": "Findings, options, visits and cost are discussed before anything starts." },
+      { "icon": "shield-check", "title": "Infection control", "text": "Sterilised instruments for each patient; disposables used once and discarded." },
+      { "icon": "hand-heart", "title": "Comfort matters", "text": "Local anaesthetic, laser options where suitable and time for your questions." },
+      { "icon": "clipboard-check", "title": "Your records, online", "text": "Your appointments, digital prescriptions and treatment plan live safely in ClinicFlow247, where you can view them from your own patient login." }
+    ]
+  },
+  "team": { "title": "Our team", "lead": "Photos and names of our chairside and reception staff are coming soon." },
+  "starterFeatures": {
+    "title": "Booking and follow-up, taken care of",
+    "lead": "Appointments, reminders and visit follow-up run on ClinicFlow247, in Aishwarya Dental Clinic's own colours.",
+    "_note": "Benefits come from src/lib/plan.ts for the clinic's plan (enterprise); nothing the plan lacks is listed."
+  }
+}

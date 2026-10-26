@@ -1,0 +1,18 @@
+{
+  "_note": "Links to this clinic's ClinicFlow247 pages (patient sign-in/registration, staff login, booking page). ENTERPRISE (white label): once enterprise.subdomain is set, production links move to https://<subdomain>.clinicflow247.com, the clinic-branded tenant app. A NEXT_PUBLIC_PORTAL_BASE_URL build arg wins on local/staging builds.",
+  "status": "placeholder",
+  "portalBaseUrl": "https://clinicflow247.com",
+  "clinicSlug": "aishwarya-dental-clinic",
+  "enterprise": {
+    "_note": "Proposed 'aishwarya' (aishwarya.clinicflow247.com), not yet confirmed by the clinic. The tenant app + load-balancer host rule + DNS must exist before any production use (owner's go needed). Not used on staging.",
+    "subdomain": "aishwarya"
+  },
+  "paths": {
+    "login": "/clinic/{slug}/login",
+    "register": "/clinic/{slug}/register",
+    "forgotPassword": "/clinic/{slug}/forgot-password",
+    "clinicPage": "/clinic/{slug}",
+    "bookingPage": "/book/{slug}",
+    "staffLogin": "/login"
+  }
+}

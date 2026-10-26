@@ -1,0 +1,80 @@
+{
+  "status": "placeholder",
+  "hero": {
+    "badge": "Vidyanagar, Guntur · Gum & Implant Specialist",
+    "titleLine1": "Strong gums, lasting teeth,",
+    "titleLine2": "a smile built to last.",
+    "lead": "Dr. Aishwarya P is a periodontist and implantologist with a fellowship in laser dentistry. From bleeding gums to a full set of implants, you get a specialist's plan, explained clearly before treatment begins.",
+    "image": "clinic-operatory",
+    "primaryCta": "Book a consultation",
+    "secondaryCta": { "label": "Explore treatments", "href": "/treatments" },
+    "checks": ["MDS, Periodontics & Implantology", "Laser dentistry", "Plan and cost before treatment"],
+    "chips": [
+      { "icon": "clock", "text": "{{hoursShort}}", "kind": "hours" },
+      { "icon": "badge-check", "text": "Dr. Aishwarya P", "sub": "MDS · Periodontist & Implantologist", "kind": "static" },
+      { "icon": "calendar-check", "text": "Online booking open day and night", "sub": "Choose a slot in under a minute", "kind": "static" }
+    ]
+  },
+  "stats": {
+    "_note": "Only verifiable facts: the qualification and fellowship (account owner + signboard), the hours (account owner) and the number of treatment areas on this site. No patient counts, years or ratings without the clinic's word.",
+    "status": "approved",
+    "items": [
+      { "value": "MDS", "label": "Specialist", "sub": "Periodontics & Implantology", "icon": "badge-check", "source": "doctors.json qualification (account owner, signboard)" },
+      { "value": "Laser", "label": "Fellowship", "sub": "Trained in laser dentistry", "icon": "zap", "source": "doctors.json qualification (signboard)" },
+      { "value": "6 days", "label": "Open weekly", "sub": "Sunday closed", "icon": "calendar", "source": "clinic.json hours" },
+      { "value": "8 PM", "label": "Evening visits", "sub": "Closing time, Monday to Saturday", "icon": "clock", "source": "clinic.json hours" }
+    ]
+  },
+  "about": {
+    "eyebrow": "About the clinic",
+    "title": "Specialist care for the foundations of your smile",
+    "paragraphs": [
+      "Teeth are only as secure as the gums and bone that hold them. That is why Aishwarya Dental Clinic and Implant Centre begins every new patient's care with the foundations, under the eye of a periodontist who treats gum disease and places implants every week.",
+      "Our clinic on Sai Baba Road, opposite EMGEE House, has calm, modern treatment rooms. Before any treatment we share our findings, lay out the options and give you the fee for each."
+    ],
+    "points": ["Every consultation with Dr. Aishwarya P", "Laser-assisted options where they help", "Written plan with visits and cost upfront"],
+    "image": "clinic-reception",
+    "badgeValue": "MDS",
+    "badgeLabel": "Periodontics & Implantology",
+    "cta": { "label": "Inside the clinic", "href": "/about" }
+  },
+  "treatments": { "eyebrow": "What we treat", "title": "From gum care to complete smile restorations", "lead": "{{categoryCount}} areas of care, led by a gum and implant specialist. Open any treatment to see how it works and how many visits it usually needs." },
+  "symptoms": { "eyebrow": "Where does it hurt?", "title": "Start with what you're noticing", "lead": "Choose the closest match and we'll open the booking form with it already filled in." },
+  "doctors": { "eyebrow": "Your specialist", "title": "Meet Dr. Aishwarya P", "lead": "" },
+  "why": {
+    "eyebrow": "Why Aishwarya Dental",
+    "title": "Specialist training, gentle hands, honest plans",
+    "points": [
+      { "icon": "badge-check", "title": "A specialist at the chair", "text": "Your gums, bone and implants are looked after by a dentist with a master's degree in exactly that field." },
+      { "icon": "zap", "title": "Laser where it helps", "text": "Fellowship training in laser dentistry, used for suitable gum and soft-tissue procedures." },
+      { "icon": "indian-rupee", "title": "Costs before treatment", "text": "You see the plan, the number of visits and the fee first, and decide in your own time." },
+      { "icon": "shield-check", "title": "Sterile, every time", "text": "Instruments are sterilised between patients and single-use items are discarded after one use." },
+      { "icon": "calendar-clock", "title": "Open late", "text": "Open {{hoursSummary}}: evening slots make it easy to come after office or classes." },
+      { "icon": "message-circle", "title": "Reminders on WhatsApp", "text": "Your confirmation, a reminder before the visit and aftercare follow-up reach your phone automatically." }
+    ]
+  },
+  "steps": {
+    "eyebrow": "Your visit",
+    "title": "Four simple steps",
+    "items": [
+      { "icon": "calendar-check", "title": "Pick a slot", "text": "Book online in under a minute, or call the clinic." },
+      { "icon": "message-circle", "title": "Confirmation on your phone", "text": "Booking details instantly, then a reminder shortly before your visit." },
+      { "icon": "stethoscope", "title": "Specialist examination", "text": "Gums, bone and teeth checked, with options explained in plain language." },
+      { "icon": "smile", "title": "Treatment and aftercare", "text": "Care at your pace, digital prescriptions and a thank-you check-in after the visit." }
+    ]
+  },
+  "booking": {
+    "stepsTitle": "Three quick steps",
+    "steps": [
+      { "title": "Concern", "text": "Tell us what you'd like checked" },
+      { "title": "Slot", "text": "A date and time that suit you" },
+      { "title": "Confirm", "text": "Your name and a mobile code" }
+    ]
+  },
+  "gallery": { "eyebrow": "Inside the clinic", "title": "Modern rooms, calm surroundings", "lead": "Our treatment room, reception and the clinic front on Sai Baba Road." },
+  "education": { "eyebrow": "Learn", "title": "Answers before you sit in the chair", "lead": "Short, practical reads on gums, implants and lasers." },
+  "faq": { "eyebrow": "Questions", "title": "Things patients often ask" },
+  "visit": { "eyebrow": "Find us", "title": "Hours and directions", "lead": "4-5-57, beside Sai Baba Road, opposite EMGEE House, Vidyanagar." },
+  "cta": { "title": "Let's look after your smile.", "lead": "Book a consultation with Dr. Aishwarya, or call us if something is hurting today.", "button": "Book a consultation" },
+  "beforeAfter": { "_note": "Only real, consented patient photos: none yet.", "status": "placeholder", "items": [] }
+}

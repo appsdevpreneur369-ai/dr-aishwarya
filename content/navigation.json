@@ -1,0 +1,44 @@
+{
+  "header": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Treatments", "href": "/treatments" },
+    { "label": "Doctor", "href": "/doctors" },
+    { "label": "Learn", "href": "/patient-education" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": [
+    {
+      "title": "Clinic",
+      "links": [
+        { "label": "About us", "href": "/about" },
+        { "label": "Dr. Aishwarya P", "href": "/doctors/dr-aishwarya" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Directions & timings", "href": "/contact" },
+        { "label": "24×7 emergency help", "href": "/emergency" }
+      ]
+    },
+    {
+      "title": "For patients",
+      "links": [
+        { "label": "Book a consultation", "href": "/book" },
+        { "label": "Treatments", "href": "/treatments" },
+        { "label": "Learn", "href": "/patient-education" },
+        { "label": "FAQs", "href": "/faqs" },
+        { "label": "Patient sign in", "href": "@portal:login" },
+        { "label": "Register as a patient", "href": "@portal:register" },
+        { "label": "Staff login", "href": "@portal:staffLogin" }
+      ]
+    },
+    {
+      "title": "Legal",
+      "links": [
+        { "label": "Privacy policy", "href": "/privacy" },
+        { "label": "Terms of use", "href": "/terms" },
+        { "label": "Medical disclaimer", "href": "/disclaimer" },
+        { "label": "Cookies", "href": "/cookies" }
+      ]
+    }
+  ]
+}

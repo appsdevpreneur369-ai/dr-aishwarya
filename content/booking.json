@@ -1,0 +1,29 @@
+{
+  "status": "placeholder",
+  "_note": "Booking popup + wizard. See docs/BOOKING.md. 'mode' is the preferred mode; the site falls back automatically clinicflow -> enquiry -> whatsapp when a mode is unavailable. WhatsApp is offered because the clinic's WhatsApp number is approved (clinic.json, 25 Oct 2026). It never shows a success the API did not return.",
+  "mode": "clinicflow",
+  "clinicflow": {
+    "_note": "Empty until the clinic is onboarded on a ClinicFlow247 environment. Build-time overrides: NEXT_PUBLIC_CLINICFLOW_API_URL, NEXT_PUBLIC_CLINICFLOW_CLINIC_SLUG, NEXT_PUBLIC_CLINICFLOW_CLINIC_ID. clinicId is optional (looked up from the slug).",
+    "apiBaseUrl": "",
+    "clinicSlug": "",
+    "clinicId": ""
+  },
+  "advanceDays": 30,
+  "otpResendSeconds": 30,
+  "allowDirectSpecialistBooking": true,
+  "defaultDoctor": "aishwarya",
+  "generalOption": { "label": "Not sure: I'd like Dr. Aishwarya to take a look", "doctors": ["aishwarya"] },
+  "popup": {
+    "_note": "Auto-opens once per browsing session after delaySeconds; never on page load and never on excludedPaths.",
+    "enabled": true,
+    "delaySeconds": 15,
+    "oncePerSession": true,
+    "showOnMobile": false,
+    "excludedPaths": ["/book", "/privacy", "/terms", "/disclaimer", "/cookies", "/emergency", "/contact"]
+  },
+  "consent": "I agree that Aishwarya Dental Clinic and Implant Centre may contact me by WhatsApp, SMS, phone or email about this appointment and my visit, and I have read the privacy policy.",
+  "whatsappMessage": "Hello {{clinic}}, I would like an appointment.\nName: {{name}}\nMobile: {{phone}}\nConcern: {{problem}}\nDoctor: {{doctor}}\nPreferred date: {{day}}\nPreferred time: {{time}}\n(sent from your website)",
+  "enquiryMessage": "Website appointment request.\nConcern: {{problem}}\nDoctor: {{doctor}}\nPreferred date: {{day}}\nPreferred time: {{time}}",
+  "generalWhatsappMessage": "Hello {{clinic}}, I have a question about a dental visit.",
+  "note": "Severe pain, a swollen face or bleeding that won't stop? Don't wait for an online slot: call our emergency line."
+}

@@ -1,0 +1,45 @@
+{
+  "_note": "Doctors shown on the site and sent to ClinicFlow (npm run tenant). Facts used, and their source: name Dr. Aishwarya P, MDS in Periodontics & Implantology (account owner, 25 Oct 2026, and the clinic signboard), Fellowship in Laser Dentistry (clinic signboard, use approved by the account owner 25 Oct 2026). NOT known and never invented: registration number, years of experience, awards, photo. Initials avatar until a real photo arrives; never a stock photo. Consultation hours follow the clinic's hours until she confirms her own (consultationStatus placeholder).",
+  "consultSlotMinutes": 15,
+  "doctors": [
+    {
+      "id": "aishwarya",
+      "status": "approved",
+      "slug": "dr-aishwarya",
+      "previousSlugs": [],
+      "firstName": "Aishwarya",
+      "lastName": "P",
+      "displayName": "Dr. Aishwarya P",
+      "initials": "A",
+      "qualification": "MDS (Periodontics & Implantology), Fellowship in Laser Dentistry",
+      "specialty": "Periodontist & Implantologist",
+      "schemaSpecialty": "Periodontics",
+      "role": "Clinic Head",
+      "isHead": true,
+      "photo": null,
+      "photoSecondary": null,
+      "registrationNumber": "",
+      "clinicflowDoctorId": null,
+      "summary": "Periodontist and implantologist with a fellowship in laser dentistry. She looks after gums, replaces missing teeth with implants and offers laser-assisted care alongside everyday dentistry.",
+      "bio": [
+        "Dr. Aishwarya P leads Aishwarya Dental Clinic and Implant Centre in Vidyanagar, Guntur. Her master's degree (MDS) is in Periodontics and Implantology: the branch of dentistry that deals with the gums, the bone holding each tooth in place, and dental implants that replace teeth which have been lost.",
+        "She has also completed a fellowship in laser dentistry. Where a laser suits the problem, such as reshaping gums or treating gum pockets, it can mean less bleeding and a more comfortable recovery. She will tell you plainly when a conventional approach is the better choice.",
+        "Because so much of dentistry depends on healthy foundations, she begins every new patient's visit with a careful look at the gums and bone before planning fillings, root canals, aligners or a smile makeover. You leave with a written plan, the number of visits it usually takes and the cost, before any treatment begins."
+      ],
+      "focus": [
+        "Bleeding, receding or swollen gums",
+        "Deep cleaning and gum pocket treatment",
+        "Single and multiple tooth implants",
+        "Laser-assisted gum and soft-tissue procedures",
+        "Root canal treatment and tooth-coloured fillings",
+        "Clear aligners and smile makeovers"
+      ],
+      "consultation": [
+        { "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"], "opens": "10:00", "closes": "20:00" }
+      ],
+      "consultationStatus": "placeholder",
+      "experienceYears": null,
+      "experienceStatus": "placeholder"
+    }
+  ]
+}

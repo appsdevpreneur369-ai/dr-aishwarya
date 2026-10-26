@@ -1,0 +1,83 @@
+{
+  "_note": "Clinic identity and contact details. Every field carries its own status. 'approved' = supplied by the account owner on 25 Oct 2026 (name, address, phone/WhatsApp, hours). A contact field with status 'placeholder' is never turned into a link: its buttons are hidden, it is left out of JSON-LD, and WhatsApp booking is disabled (see src/lib/contact.ts). Edit guide: docs/EDITING.md.",
+  "name": { "value": "Aishwarya Dental Clinic and Implant Centre", "status": "approved" },
+  "shortName": "Aishwarya Dental",
+  "slug": "aishwarya-dental-clinic",
+  "tagline": { "value": "Gum, implant and laser dentistry in Vidyanagar, Guntur", "status": "placeholder" },
+  "description": {
+    "value": "Aishwarya Dental Clinic and Implant Centre in Vidyanagar, Guntur, is run by Dr. Aishwarya P, a periodontist and implantologist (MDS) with a fellowship in laser dentistry.",
+    "status": "approved"
+  },
+  "address": {
+    "status": "approved",
+    "_note": "Supplied by the account owner (25 Oct 2026). The landmark is printed as written (it already says 'opp.').",
+    "doorNumber": "4-5-57",
+    "street": "beside Sai Baba Road",
+    "landmark": "opp. EMGEE House",
+    "locality": "Vidyanagar, Guntur",
+    "district": "Guntur",
+    "region": "Andhra Pradesh",
+    "postalCode": "522007",
+    "country": "IN",
+    "countryName": "India"
+  },
+  "phone": {
+    "status": "approved",
+    "_note": "Supplied by the account owner (25 Oct 2026) for calls and WhatsApp: 070755 65444.",
+    "display": "+91 70755 65444",
+    "e164": "+917075565444"
+  },
+  "whatsapp": {
+    "status": "approved",
+    "_note": "Same number as calls (account owner, 25 Oct 2026). Every WhatsApp button, the JSON-LD and the WhatsApp booking fallback use it.",
+    "display": "+91 70755 65444",
+    "e164": "+917075565444"
+  },
+  "email": {
+    "status": "placeholder",
+    "value": "email to be confirmed"
+  },
+  "timezone": "Asia/Kolkata",
+  "hours": {
+    "_note": "Supplied by the account owner (25 Oct 2026): Monday–Saturday 10 AM – 8 PM, Sunday closed. Emergency calls outside these hours: content/emergency.json → availability.",
+    "status": "approved",
+    "sessionsStatus": "approved",
+    "daysStatus": "approved",
+    "days": [
+      { "day": "monday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "tuesday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "wednesday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "thursday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "friday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "saturday", "sessions": [{ "opens": "10:00", "closes": "20:00" }] },
+      { "day": "sunday", "sessions": [] }
+    ]
+  },
+  "maps": {
+    "status": "placeholder",
+    "_note": "No Google Maps place link supplied yet. Until shareUrl is set, 'Get directions' and the embedded map search for the query below and the site says the pin is approximate. To finish: open the clinic in Google Maps → Share → copy the link into shareUrl, and set geo from the pin.",
+    "query": "Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur, Andhra Pradesh 522007",
+    "shareUrl": "",
+    "embedUrl": "",
+    "geo": null,
+    "wayfinding": [
+      { "icon": "navigation", "text": "Come to Vidyanagar and take Sai Baba Road." },
+      { "icon": "map-pin", "text": "Look for EMGEE House: the clinic is directly opposite, at door number 4-5-57." },
+      { "icon": "arrow-up-right", "text": "The walnut-brown signboard reads 'Aishwarya Dental Clinic & Implant Centre'." }
+    ]
+  },
+  "areaServed": {
+    "status": "placeholder",
+    "places": ["Vidyanagar", "Brodipet", "Arundelpet", "Lakshmipuram", "Guntur"]
+  },
+  "foundingNote": {
+    "status": "placeholder",
+    "value": "Caring for smiles in Vidyanagar, Guntur"
+  },
+  "googleReview": {
+    "status": "placeholder",
+    "_note": "The 'write a review' link patients receive in the review request (ClinicFlow googleReviewLink). ONE edit to go live: paste https://search.google.com/local/writereview?placeid=<PLACE_ID> (Place ID from Google's free Place ID Finder) or https://g.page/r/<code>/review into writeReviewUrl and set status 'approved'; then run `npm run tenant`. While placeholder, the tenant file sends null. stagingDemoUrl is the clinic's Google search panel supplied by the account owner: used ONLY by scripts/staging/setup-staging.py --demo-review-link so the review request can be shown on staging; never production.",
+    "writeReviewUrl": "",
+    "stagingDemoUrl": "https://www.google.com/search?kgmid=/g/11wwrmhfw9&q=Aishwarya+Dental+Clinic+and+Implant+Centre"
+  }
+}

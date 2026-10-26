@@ -1,0 +1,67 @@
+{
+  "_note": "Per-page <title> (a suffix ' | Aishwarya Dental, Vidyanagar, Guntur' is added when it fits in 60 characters), meta description (50–170 characters), H1 and intro. Local keywords: periodontist in Guntur, dental implants Guntur, dentist in Vidyanagar, laser dentistry Guntur.",
+  "home": {
+    "title": "Aishwarya Dental Clinic & Implant Centre, Guntur",
+    "description": "Gum and implant specialist in Vidyanagar, Guntur. Dr. Aishwarya P, MDS Periodontics & Implantology, Fellowship in Laser Dentistry. Book online.",
+    "absoluteTitle": true
+  },
+  "about": {
+    "title": "About Our Clinic in Vidyanagar",
+    "description": "Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur: specialist-led gum, implant and laser dentistry with clear plans and costs upfront.",
+    "h1": "Built on healthy foundations",
+    "intro": "A specialist-led dental clinic beside Sai Baba Road, Vidyanagar. Here is how we look after you."
+  },
+  "doctors": {
+    "title": "Dr. Aishwarya P, Periodontist & Implantologist",
+    "description": "Dr. Aishwarya P, MDS Periodontics & Implantology with a Fellowship in Laser Dentistry, at Aishwarya Dental Clinic, Guntur. Profile, timings and booking.",
+    "h1": "Your dentist",
+    "intro": "Every consultation at the clinic is with Dr. Aishwarya P."
+  },
+  "treatments": {
+    "title": "Dental Treatments in Guntur",
+    "description": "Gum treatment, dental implants, laser dentistry, root canals, aligners, smile design and more at Aishwarya Dental Clinic, Vidyanagar, Guntur.",
+    "h1": "Our treatments",
+    "intro": "Find out what happens during each treatment, the usual number of sittings and who it suits."
+  },
+  "gallery": {
+    "title": "Clinic Gallery",
+    "description": "Photos of Aishwarya Dental Clinic and Implant Centre in Vidyanagar, Guntur: our treatment room, reception and clinic front. Other images are representative.",
+    "h1": "A look inside",
+    "intro": "Our own photos come first; the remaining images are representative and labelled as such."
+  },
+  "education": {
+    "title": "Learn: Gums, Implants & Lasers",
+    "description": "Plain-language guides from Aishwarya Dental Clinic, Guntur: bleeding gums, what an implant involves, laser dentistry and caring for an implant.",
+    "h1": "Learn about your mouth",
+    "intro": "Clear, short guides on the topics our patients ask about most."
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "description": "Answers about visiting Aishwarya Dental Clinic in Vidyanagar, Guntur: timings, directions, costs, first visits, children and dental emergencies.",
+    "h1": "Frequently asked questions",
+    "intro": "Still have a question? Ask when you book, or call the clinic."
+  },
+  "book": {
+    "title": "Book a Dental Consultation",
+    "description": "Book a consultation with Dr. Aishwarya P at Aishwarya Dental Clinic, Vidyanagar, Guntur. Pick your concern and a slot, then confirm with a mobile code.",
+    "h1": "Book a consultation",
+    "intro": "Under a minute from start to finish. Your confirmation arrives as soon as the slot is booked."
+  },
+  "contact": {
+    "title": "Contact, Timings & Directions",
+    "description": "Aishwarya Dental Clinic and Implant Centre, 4-5-57, beside Sai Baba Road, opp. EMGEE House, Vidyanagar, Guntur 522007. Phone, WhatsApp, hours and map.",
+    "h1": "Visit us in Vidyanagar",
+    "intro": "Beside Sai Baba Road, opposite EMGEE House, Vidyanagar, Guntur."
+  },
+  "emergency": {
+    "title": "24×7 Dental Emergency Help",
+    "description": "Toothache, a knocked-out tooth, swelling or bleeding? First steps, when to go to hospital and how to reach Aishwarya Dental Clinic, Guntur.",
+    "h1": "Dental emergency? Here is what to do",
+    "intro": "First steps for common dental emergencies, and how to reach us."
+  },
+  "privacy": { "title": "Privacy Policy", "description": "What personal and health data Aishwarya Dental Clinic and Implant Centre holds, why, and how it is protected, in line with the DPDP Act, 2023." },
+  "terms": { "title": "Terms of Use", "description": "Rules for the Aishwarya Dental Clinic website and online booking: confirmations, changing a slot, cancelling and fair use." },
+  "disclaimer": { "title": "Medical Disclaimer", "description": "Information on the Aishwarya Dental Clinic website is general guidance only and does not replace an examination by a qualified dentist." },
+  "cookies": { "title": "Cookie Policy", "description": "The cookies and browser storage the Aishwarya Dental Clinic website uses, what they are for and how to control them in your browser." },
+  "notFound": { "title": "Page not found", "h1": "We couldn't find that page", "intro": "The link may be out of date or mistyped. Try one of these instead:" }
+}

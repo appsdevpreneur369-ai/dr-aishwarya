@@ -1,0 +1,40 @@
+{
+  "status": "placeholder",
+  "_note": "Aishwarya Dental Clinic palette (25 Oct 2026), taken from her logo: the steel of the implant screw (primary), the graphite band and 'A' (text, footer), the silver-white enamel (tints), plus a champagne accent for calls to action that matches the 'premium' tagline and the walnut-and-marble interior. Champagne is a BACKGROUND colour only: text on it is always ctaInk (graphite). 'mint' keeps its key name for the shared components but is a silver tint here: decoration only on light backgrounds, as text only on graphite (mintOnDark). Colours become CSS variables (src/lib/theme.ts) and the ClinicFlow white-label theme tokens (npm run tenant). Run `npm run contrast` after any change.",
+  "colors": {
+    "primary": "#2F5878",
+    "primaryHover": "#264A66",
+    "primaryDeep": "#1C3850",
+    "navy": "#1B2128",
+    "navySoft": "#283039",
+    "tint": "#EEF2F6",
+    "mint": "#C7D2DD",
+    "mintSoft": "#F2F5F8",
+    "cta": "#DCC08A",
+    "ctaHover": "#CFAE6E",
+    "ctaInk": "#1B2128",
+    "background": "#F8F9FB",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#F1F4F7",
+    "text": "#1B2128",
+    "textSecondary": "#4E5A66",
+    "border": "#DCE2E8",
+    "onDark": "#FFFFFF",
+    "onDarkMuted": "#BAC5D0",
+    "mintOnDark": "#C7D2DD",
+    "success": "#1D6E4E",
+    "warning": "#9A4A0C",
+    "warningText": "#7F3C0A",
+    "warningSoft": "#FBF0DE",
+    "whatsapp": "#0F7A43"
+  },
+  "fonts": {
+    "heading": "Playfair Display",
+    "body": "Manrope"
+  },
+  "radius": "0.875rem",
+  "wordmark": {
+    "primary": "Aishwarya",
+    "secondary": "Dental Clinic & Implant Centre"
+  }
+}

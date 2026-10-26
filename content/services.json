@@ -1,0 +1,350 @@
+{
+  "_note": "Treatment categories (URL /treatments/<slug>). 'approved' = the service appears on the clinic's signboard or is Dr. Aishwarya's own specialty (Periodontics & Implantology, laser fellowship): gum care, implants, laser, root canal, aligners, cosmetic. 'placeholder' = a typical service for this practice that the clinic has not confirmed yet (Draft badge on staging, PENDING_ITEMS.md). The signboard says 'Cosmetology': read here as cosmetic dentistry only; facial aesthetics are NOT listed until the doctor confirms. Visit counts are typical ranges and always say 'usually'. Prices are never published. 'size' controls the tile size on /treatments (lg | md | sm).",
+  "priceNote": "Every mouth is different, so the cost is set after the examination. Dr. Aishwarya explains the plan, the number of visits and the fee before treatment starts.",
+  "categories": [
+    {
+      "slug": "gum-care",
+      "status": "approved",
+      "title": "Gum Treatment (Periodontics)",
+      "shortTitle": "Gum treatment",
+      "icon": "droplet",
+      "size": "lg",
+      "image": "treat-gums",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Bleeding, swollen or receding gums and loose teeth, treated by a specialist periodontist.",
+      "intro": [
+        "Gums that bleed when you brush are easy to ignore because they rarely hurt. Left alone, the inflammation can travel below the gum line, loosen the bone around the teeth and, over years, make healthy teeth wobble. Treated early, it usually settles with careful cleaning and better home care.",
+        "Gum disease is Dr. Aishwarya's specialty. She measures the space between each tooth and its gum, checks the bone on X-ray when needed, and tells you which areas are healthy, which need deeper cleaning and which may benefit from gum surgery or laser treatment."
+      ],
+      "steps": [
+        { "title": "Gum charting", "text": "Each tooth's gum pocket is measured and recorded, so progress can be compared at every review." },
+        { "title": "Deep cleaning", "text": "Hardened deposits are removed from the roots under local anaesthetic, usually over one or two sittings." },
+        { "title": "Review and maintenance", "text": "The gums are rechecked after healing, and a cleaning interval is set to keep them stable." }
+      ],
+      "subTreatments": [
+        { "slug": "scaling-root-planing", "title": "Deep cleaning (scaling and root planing)", "summary": "Smooths and clears the roots beneath the gum, giving the gum a chance to reattach snugly.", "visits": "Usually 1–2 visits" },
+        { "slug": "flap-surgery", "title": "Gum (flap) surgery", "summary": "Lets the periodontist reach and clean deep pockets that cleaning alone cannot.", "visits": "Usually 1 visit plus a review" },
+        { "slug": "gum-recession", "title": "Treatment for receding gums", "summary": "Covers exposed roots to reduce sensitivity and protect the tooth.", "visits": "Usually 1 visit plus a review" },
+        { "slug": "splinting", "title": "Splinting of loose teeth", "summary": "Joins mobile teeth to their neighbours for support while the gums heal.", "visits": "Usually 1 visit" }
+      ],
+      "faqs": [
+        { "q": "My gums bleed but don't hurt. Should I still come in?", "a": "Yes. Bleeding is the most common early sign of gum disease, and the earlier it is treated the simpler the treatment usually is." },
+        { "q": "Is deep cleaning painful?", "a": "We numb the gums beforehand; patients usually describe a sensation of pressure, not pain. Teeth can feel sensitive for a few days while the gums heal." },
+        { "q": "Can loose teeth be saved?", "a": "Often they can, if enough bone remains. Dr. Aishwarya will check the bone support and tell you honestly which teeth can be kept." }
+      ],
+      "seo": {
+        "title": "Gum Specialist (Periodontist) in Guntur",
+        "description": "Bleeding or receding gums and loose teeth treated by Dr. Aishwarya P, MDS Periodontics, at Aishwarya Dental Clinic, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "dental-implants",
+      "status": "approved",
+      "title": "Dental Implants",
+      "shortTitle": "Implants",
+      "icon": "anchor",
+      "size": "lg",
+      "image": "treat-implants",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Fixed replacements for one tooth, several teeth or a full arch, planned by an implantologist.",
+      "intro": [
+        "Think of an implant as an artificial root: a slim titanium screw set into the jaw in the gap left by a lost tooth. When the bone has grown firmly around it, the visible tooth (a crown, a bridge or a denture) is attached. Because it is anchored in bone, it does not rely on the neighbouring teeth for support.",
+        "Implant planning starts with the gums and the bone, which is exactly what Dr. Aishwarya trained in. She checks the bone height and width, your general health and your bite, and explains whether an implant suits you, how long the process usually takes and what it will cost."
+      ],
+      "steps": [
+        { "title": "Assessment", "text": "Examination and X-rays or a 3D scan show how much bone is available and where the implant should sit." },
+        { "title": "Implant placement", "text": "The post is placed under local anaesthetic, then left to bond with the bone, usually for a few months." },
+        { "title": "The new tooth", "text": "A crown, bridge or denture is made to fit and fixed onto the implant." }
+      ],
+      "subTreatments": [
+        { "slug": "single-implant", "title": "Single-tooth implant", "summary": "Replaces one missing tooth without trimming the teeth on either side.", "visits": "Usually 3–4 visits over a few months" },
+        { "slug": "implant-bridge", "title": "Implant-supported bridge", "summary": "Two or more implants carry a bridge to replace several teeth in a row.", "visits": "Usually 4–5 visits over a few months" },
+        { "slug": "implant-denture", "title": "Implant-retained denture", "summary": "Snaps onto two or more implants, so the denture no longer slips when you chew or speak.", "visits": "Usually 4–6 visits over a few months" },
+        { "slug": "bone-grafting", "title": "Bone grafting", "summary": "Builds up bone where it has thinned, so an implant can be placed securely.", "visits": "Usually 1 visit, with healing before the implant" }
+      ],
+      "faqs": [
+        { "q": "Am I too old for an implant?", "a": "Age alone is rarely the issue. What matters is your general health, the bone available and how well the gums are looked after." },
+        { "q": "Does the procedure hurt?", "a": "It is done under local anaesthetic. Most people describe the following days as sore rather than painful, and you will get clear aftercare advice." },
+        { "q": "How long does an implant last?", "a": "With healthy gums, good cleaning and regular reviews, implants can last many years. Smoking and untreated gum disease are the main reasons they fail." }
+      ],
+      "seo": {
+        "title": "Dental Implants in Vidyanagar, Guntur",
+        "description": "Replace one tooth or many with implants, implant bridges or implant-held dentures, planned by Dr. Aishwarya P, MDS, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "laser-dentistry",
+      "status": "approved",
+      "title": "Laser Dentistry",
+      "shortTitle": "Laser dentistry",
+      "icon": "zap",
+      "size": "md",
+      "image": "clinic-operatory",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Laser-assisted gum and soft-tissue procedures, from a dentist with a fellowship in laser dentistry.",
+      "intro": [
+        "A dental laser uses a focused beam of light to cut or reshape soft tissue such as the gums. For suitable procedures it seals small blood vessels as it works, which usually means less bleeding, often fewer stitches and a gentler recovery.",
+        "Dr. Aishwarya holds a fellowship in laser dentistry. A laser is a tool rather than a treatment in itself, so she uses it where it genuinely helps and explains when a conventional method would serve you better."
+      ],
+      "steps": [
+        { "title": "Is a laser right for you?", "text": "The problem is examined first; only then is a laser or a conventional approach recommended." },
+        { "title": "The procedure", "text": "Usually done under local anaesthetic, with protective glasses for you and the team." },
+        { "title": "Healing", "text": "Simple aftercare advice and a review visit to check the area has settled." }
+      ],
+      "subTreatments": [
+        { "slug": "laser-gum-contouring", "title": "Laser gum contouring", "summary": "Reshapes uneven or excess gum for a more balanced smile.", "visits": "Usually 1 visit" },
+        { "slug": "laser-pocket-therapy", "title": "Laser-assisted gum pocket therapy", "summary": "Used alongside deep cleaning to treat infected gum pockets.", "visits": "Usually 1–2 visits" },
+        { "slug": "laser-frenectomy", "title": "Laser frenectomy", "summary": "Releases a tight tongue-tie or lip-tie with minimal bleeding.", "visits": "Usually 1 visit" },
+        { "slug": "laser-ulcer-relief", "title": "Mouth ulcer and sore relief", "summary": "Laser treatment can ease the pain of some ulcers and cold sores.", "visits": "Usually 1 visit" }
+      ],
+      "faqs": [
+        { "q": "Is laser treatment painless?", "a": "Many people find it more comfortable than a scalpel, but most procedures still need local anaesthetic. You will be told what to expect beforehand." },
+        { "q": "Is a laser safe?", "a": "Yes, when used by a trained dentist with the correct eye protection. Dr. Aishwarya has completed a fellowship in laser dentistry." },
+        { "q": "Can every dental problem be treated with a laser?", "a": "No. Lasers suit certain gum and soft-tissue procedures. For many other treatments the conventional method remains the best choice." }
+      ],
+      "seo": {
+        "title": "Laser Dentistry in Guntur",
+        "description": "Laser gum contouring, laser-assisted gum treatment and frenectomy with Dr. Aishwarya P, Fellowship in Laser Dentistry, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "root-canal-treatment",
+      "status": "approved",
+      "title": "Root Canal Treatment",
+      "shortTitle": "Root canals",
+      "icon": "activity",
+      "size": "md",
+      "image": "treat-root-canal",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Saves a tooth with infected or inflamed nerve tissue, under local anaesthetic.",
+      "intro": [
+        "Deep decay or a crack can let bacteria reach the soft tissue inside a tooth. The result is often a lingering ache, pain on biting or a swelling near the root. A root canal removes that infected tissue, disinfects the inside of the tooth and seals it, so you keep your own tooth.",
+        "Before starting, the tooth and the gum and bone around it are checked to make sure it can be saved for the long term. You will be told how many sittings to expect and whether a crown is advised afterwards."
+      ],
+      "steps": [
+        { "title": "Diagnosis", "text": "Examination and an X-ray confirm whether the nerve is affected and how many canals the tooth has." },
+        { "title": "Cleaning and sealing", "text": "With the tooth numbed, each canal is disinfected, shaped and sealed." },
+        { "title": "Protecting the tooth", "text": "A filling or crown restores strength so the tooth can be used normally again." }
+      ],
+      "subTreatments": [
+        { "slug": "single-sitting-rct", "title": "Root canal treatment", "summary": "Removes infected nerve tissue and seals the canals; sometimes possible in one sitting.", "visits": "Usually 1–3 visits" },
+        { "slug": "re-rct", "title": "Re-treatment of an old root canal", "summary": "Cleans and reseals a previously treated tooth that has become painful again.", "visits": "Usually 2–3 visits" },
+        { "slug": "post-rct-crown", "title": "Crown after root canal", "summary": "Caps a root-filled back tooth so it does not crack under biting force.", "visits": "Usually 2 visits" }
+      ],
+      "faqs": [
+        { "q": "Will a root canal hurt?", "a": "The tooth is numbed, so the treatment itself should feel much like a filling. It is usually the infection beforehand that hurts." },
+        { "q": "Can't I just have the tooth removed?", "a": "You can, but a gap brings its own problems. Saving the tooth is usually simpler than replacing it later." }
+      ],
+      "seo": {
+        "title": "Root Canal Treatment in Vidyanagar, Guntur",
+        "description": "Root canal treatment and re-treatment under local anaesthetic at Aishwarya Dental Clinic, Vidyanagar, Guntur, with a clear plan before you start."
+      }
+    },
+    {
+      "slug": "braces-aligners",
+      "status": "approved",
+      "title": "Clear Aligners & Braces",
+      "shortTitle": "Aligners & braces",
+      "icon": "align-center",
+      "size": "md",
+      "image": "treat-braces",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Straighter teeth with nearly invisible aligners or fixed braces.",
+      "intro": [
+        "Crowded, gapped or protruding teeth are not only a matter of looks: they can be harder to clean and can put uneven load on the gums. Clear aligners are a series of thin, removable trays that move the teeth a little at a time. Fixed braces remain a good option for some bites.",
+        "Your gums need to be healthy before teeth are moved, so treatment starts with a gum check. You will see which option suits your bite, the expected duration and the cost before deciding."
+      ],
+      "steps": [
+        { "title": "Records", "text": "Photos, X-rays and an impression or scan of your teeth." },
+        { "title": "Your plan", "text": "A step-by-step plan showing how the teeth will move and roughly how long it will take." },
+        { "title": "Regular checks", "text": "Short visits to track progress, followed by retainers to hold the result." }
+      ],
+      "subTreatments": [
+        { "slug": "clear-aligners", "title": "Clear aligners", "summary": "Removable, nearly invisible trays changed every few weeks.", "visits": "Usually reviews every 6–8 weeks" },
+        { "slug": "fixed-braces", "title": "Fixed braces", "summary": "Metal or tooth-coloured brackets for bites that need more control.", "visits": "Usually monthly reviews" },
+        { "slug": "retainers", "title": "Retainers", "summary": "Keeps teeth in their new position once treatment ends.", "visits": "Usually 1–2 visits" }
+      ],
+      "faqs": [
+        { "q": "Am I too old for aligners?", "a": "Adults can straighten their teeth at any age, provided the gums and bone are healthy." },
+        { "q": "How long will treatment take?", "a": "It depends on how far the teeth need to move: many cases take from several months to about two years. Your plan will give an estimate." }
+      ],
+      "seo": {
+        "title": "Clear Aligners & Braces in Guntur",
+        "description": "Clear aligners, fixed braces and retainers at Aishwarya Dental Clinic, Vidyanagar, Guntur, with a gum check before teeth are moved."
+      }
+    },
+    {
+      "slug": "cosmetic-dentistry",
+      "status": "approved",
+      "title": "Cosmetic Dentistry & Smile Design",
+      "shortTitle": "Smile design",
+      "icon": "sparkles",
+      "size": "md",
+      "image": "treat-cosmetic",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Whitening, veneers, bonding and gum contouring for a brighter, more even smile.",
+      "intro": [
+        "A smile makeover can be as small as closing one gap or as complete as reshaping the gum line and the teeth together. A periodontist looks at both, because a balanced smile depends on the frame of the gums as much as the teeth themselves.",
+        "You will talk through what bothers you, see the options side by side and agree on a plan you are comfortable with. Healthy teeth are never cut more than needed."
+      ],
+      "steps": [
+        { "title": "Smile consultation", "text": "Photos and a discussion of what you would like to change." },
+        { "title": "Preview", "text": "Where suitable, a mock-up shows the likely result before anything is done." },
+        { "title": "Treatment", "text": "Carried out in the agreed order, often gums first, then teeth." }
+      ],
+      "subTreatments": [
+        { "slug": "teeth-whitening", "title": "Teeth whitening", "summary": "Lightens natural tooth colour in the clinic or with supervised home trays.", "visits": "Usually 1–2 visits" },
+        { "slug": "veneers", "title": "Veneers", "summary": "Thin, tooth-coloured shells that improve shape and shade of front teeth.", "visits": "Usually 2–3 visits" },
+        { "slug": "composite-bonding", "title": "Composite bonding", "summary": "Repairs chips and closes small gaps with tooth-coloured filling material.", "visits": "Usually 1 visit" },
+        { "slug": "gummy-smile", "title": "Gummy smile correction", "summary": "Reshapes excess gum, often with a laser, so more of each tooth shows.", "visits": "Usually 1 visit" }
+      ],
+      "faqs": [
+        { "q": "Does whitening damage teeth?", "a": "Supervised whitening is considered safe for enamel. Some temporary sensitivity is common and settles within days." },
+        { "q": "Will my veneers look natural?", "a": "The shade and shape are chosen with you, to suit your face and neighbouring teeth." }
+      ],
+      "seo": {
+        "title": "Smile Design & Cosmetic Dentistry in Guntur",
+        "description": "Teeth whitening, veneers, bonding and gummy-smile correction at Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "general-dentistry",
+      "status": "placeholder",
+      "title": "Check-ups & Fillings",
+      "shortTitle": "Check-ups",
+      "icon": "stethoscope",
+      "size": "sm",
+      "image": "treat-general",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Routine examinations, tooth-coloured fillings and treatment for sensitive teeth.",
+      "intro": [
+        "A routine examination is the easiest way to find a small cavity or early gum trouble before it causes pain. Every check-up covers each tooth, the gums, how your teeth meet and the inside of your cheeks and tongue, and ends with a straightforward summary of what is healthy and what needs work.",
+        "Children are welcome too: early visits are kept short and relaxed so that the dental chair becomes a familiar place."
+      ],
+      "steps": [
+        { "title": "Your history", "text": "Any symptoms, your medical conditions and the medicines you take." },
+        { "title": "Examination", "text": "Teeth, gums and bite are checked; X-rays are taken only when they help the decision." },
+        { "title": "Your plan", "text": "What can wait, what needs treatment and the cost of each step." }
+      ],
+      "subTreatments": [
+        { "slug": "dental-examination", "title": "Dental examination", "summary": "A complete check of teeth, gums and mouth with an explained plan.", "visits": "Usually 1 visit" },
+        { "slug": "composite-fillings", "title": "Tooth-coloured fillings", "summary": "Restores a decayed or chipped tooth with material that matches its shade.", "visits": "Usually 1 visit" },
+        { "slug": "sensitivity", "title": "Sensitive teeth", "summary": "Finds the cause of twinges with cold or sweet food and treats it.", "visits": "Usually 1–2 visits" },
+        { "slug": "childrens-dentistry", "title": "Children's check-ups", "summary": "Gentle visits, fluoride and sealants to protect young teeth.", "visits": "Usually 1 visit" }
+      ],
+      "faqs": [
+        { "q": "How often should I come for a check-up?", "a": "Many adults do well with a visit every six months; people with gum problems may need shorter intervals. You will be advised what suits you." }
+      ],
+      "seo": {
+        "title": "Dental Check-ups & Fillings in Vidyanagar",
+        "description": "Dental check-ups, tooth-coloured fillings and children's visits at Aishwarya Dental Clinic, Vidyanagar, Guntur. Book online or call the clinic."
+      }
+    },
+    {
+      "slug": "cleaning-prevention",
+      "status": "placeholder",
+      "title": "Cleaning & Prevention",
+      "shortTitle": "Cleaning",
+      "icon": "sparkle",
+      "size": "sm",
+      "image": "space-toothbrushes",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Professional scaling and polishing, with brushing advice that fits your mouth.",
+      "intro": [
+        "Even careful brushing leaves deposits behind in places a toothbrush cannot reach. Over time they harden into tartar, which irritates the gums. A professional clean removes it and leaves the tooth surfaces smooth, so plaque finds it harder to build up again.",
+        "As a gum specialist, Dr. Aishwarya also shows you where your own cleaning is missing and which brush, floss or interdental aids suit your teeth."
+      ],
+      "steps": [
+        { "title": "Check", "text": "A quick gum check to make sure a routine clean is what you need." },
+        { "title": "Scaling and polishing", "text": "Tartar and stains are removed with ultrasonic and hand instruments." },
+        { "title": "Home-care advice", "text": "A simple routine for the areas that need extra attention." }
+      ],
+      "subTreatments": [
+        { "slug": "scaling-polishing", "title": "Scaling and polishing", "summary": "Removes tartar and surface stains to keep gums healthy.", "visits": "Usually 1 visit" },
+        { "slug": "fluoride-varnish", "title": "Fluoride varnish", "summary": "Strengthens enamel for people prone to cavities.", "visits": "Usually 1 visit" },
+        { "slug": "home-care-coaching", "title": "Brushing and flossing coaching", "summary": "Practical guidance on the right tools and technique for you.", "visits": "Usually part of the cleaning visit" }
+      ],
+      "faqs": [
+        { "q": "Will cleaning make my teeth loose or sensitive?", "a": "No. Removing tartar can expose areas the deposits were covering, so teeth may feel slightly sensitive for a day or two, but the cleaning itself does not loosen teeth." }
+      ],
+      "seo": {
+        "title": "Teeth Cleaning & Scaling in Guntur",
+        "description": "Professional scaling, polishing and fluoride treatment with a gum specialist at Aishwarya Dental Clinic, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "oral-surgery",
+      "status": "placeholder",
+      "title": "Extractions & Minor Oral Surgery",
+      "shortTitle": "Extractions",
+      "icon": "scissors",
+      "size": "sm",
+      "image": "treat-extraction",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": true,
+      "short": "Careful removal of damaged or impacted teeth, including wisdom teeth.",
+      "intro": [
+        "Sometimes a tooth cannot be saved, or a wisdom tooth has no room to come through properly. Removing it under local anaesthetic, with care for the surrounding gum and bone, keeps the area healthy and leaves good conditions for an implant later if you want one.",
+        "Complex surgical cases may be referred to an oral and maxillofacial surgeon; you will be told before the day if that applies."
+      ],
+      "steps": [
+        { "title": "Assessment", "text": "An X-ray shows the root shape and nearby structures before anything is planned." },
+        { "title": "Removal", "text": "Done under local anaesthetic, with the socket protected for healing." },
+        { "title": "Aftercare", "text": "Written instructions and a check-up if stitches were placed." }
+      ],
+      "subTreatments": [
+        { "slug": "simple-extraction", "title": "Tooth extraction", "summary": "Removes a tooth that is broken, badly decayed or very loose.", "visits": "Usually 1 visit" },
+        { "slug": "wisdom-tooth-removal", "title": "Wisdom tooth removal", "summary": "Removes a wisdom tooth that is impacted, decayed or repeatedly infected.", "visits": "Usually 1 visit plus a review" },
+        { "slug": "socket-preservation", "title": "Socket preservation", "summary": "Fills the socket after extraction to keep bone for a future implant.", "visits": "Usually done with the extraction" }
+      ],
+      "faqs": [
+        { "q": "When can I eat after an extraction?", "a": "Usually once the numbness wears off, choosing soft, cool food and chewing on the other side for the first day." }
+      ],
+      "seo": {
+        "title": "Tooth Extraction & Wisdom Teeth in Guntur",
+        "description": "Tooth extractions, wisdom tooth removal and socket preservation for future implants at Aishwarya Dental Clinic, Vidyanagar, Guntur."
+      }
+    },
+    {
+      "slug": "crowns-dentures",
+      "status": "placeholder",
+      "title": "Crowns, Bridges & Dentures",
+      "shortTitle": "Crowns & dentures",
+      "icon": "layers",
+      "size": "sm",
+      "image": "treat-crowns",
+      "doctors": ["aishwarya"],
+      "confirmSpecialist": false,
+      "short": "Restores broken teeth and replaces missing ones with fixed or removable options.",
+      "intro": [
+        "A crown covers and protects a tooth that is cracked, heavily filled or root-treated. A bridge replaces a missing tooth by anchoring to the teeth on either side. Dentures replace several or all teeth and can be made more secure with implants.",
+        "You will see the fixed and removable choices side by side, with the visits and fee for each, so you can pick what suits your mouth and budget."
+      ],
+      "steps": [
+        { "title": "Choosing the option", "text": "Crown, bridge, denture or implant, compared honestly." },
+        { "title": "Preparation and impressions", "text": "The tooth or gums are prepared and measurements taken for the lab." },
+        { "title": "Fitting", "text": "The restoration is tried in, adjusted for your bite and fixed or delivered." }
+      ],
+      "subTreatments": [
+        { "slug": "crowns", "title": "Crowns (caps)", "summary": "Metal-free or metal-ceramic caps that restore strength and shape.", "visits": "Usually 2 visits" },
+        { "slug": "bridges", "title": "Bridges", "summary": "Fixed replacement for one or two missing teeth.", "visits": "Usually 2–3 visits" },
+        { "slug": "dentures", "title": "Complete and partial dentures", "summary": "Removable teeth made to fit comfortably and look natural.", "visits": "Usually 4–5 visits" }
+      ],
+      "faqs": [
+        { "q": "Bridge or implant: which is better?", "a": "Both work well in the right situation. An implant leaves the neighbouring teeth untouched; a bridge is quicker. You will get a clear comparison for your case." }
+      ],
+      "seo": {
+        "title": "Crowns, Bridges & Dentures in Guntur",
+        "description": "Dental crowns, bridges and complete or partial dentures at Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur."
+      }
+    }
+  ]
+}

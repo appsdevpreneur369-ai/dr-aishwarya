@@ -1,0 +1,15 @@
+{
+  "_note": "'How can we help?' chips on the home page and the first step of the booking wizard. Each problem routes to doctor ids from doctors.json and links to a treatment category. One dentist today, so every problem routes to Dr. Aishwarya.",
+  "status": "placeholder",
+  "problems": [
+    { "id": "bleeding-gums", "label": "Gums bleed or look swollen", "icon": "droplet", "doctors": ["aishwarya"], "category": "gum-care" },
+    { "id": "loose-teeth", "label": "A tooth feels loose", "icon": "circle-alert", "doctors": ["aishwarya"], "category": "gum-care" },
+    { "id": "missing-teeth", "label": "I want to replace a missing tooth", "icon": "circle-dashed", "doctors": ["aishwarya"], "category": "dental-implants" },
+    { "id": "toothache", "label": "Toothache that keeps coming back", "icon": "zap", "doctors": ["aishwarya"], "category": "root-canal-treatment" },
+    { "id": "crooked-teeth", "label": "Crooked or gapped teeth", "icon": "align-center", "doctors": ["aishwarya"], "category": "braces-aligners" },
+    { "id": "smile-makeover", "label": "I'd like a brighter smile", "icon": "sparkles", "doctors": ["aishwarya"], "category": "cosmetic-dentistry" },
+    { "id": "gummy-smile", "label": "Too much gum shows when I smile", "icon": "smile", "doctors": ["aishwarya"], "category": "laser-dentistry" },
+    { "id": "wisdom-tooth", "label": "Pain behind my last tooth", "icon": "scissors", "doctors": ["aishwarya"], "category": "oral-surgery" },
+    { "id": "check-up", "label": "Routine check-up or cleaning", "icon": "stethoscope", "doctors": ["aishwarya"], "category": "general-dentistry" }
+  ]
+}

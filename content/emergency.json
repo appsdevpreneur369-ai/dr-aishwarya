@@ -1,0 +1,22 @@
+{
+  "status": "placeholder",
+  "availability": {
+    "status": "placeholder",
+    "_note": "24x7 emergency phone support, requested by the account owner (25 Oct 2026) and still TO BE CONFIRMED BY DR. AISHWARYA in the demo meeting (who answers at night, and whether night visits are offered or only advice). Uses the clinic's approved phone number. Stays 'placeholder' (Draft badge, left out of JSON-LD) until she confirms; then set 'approved'.",
+    "label": "24×7 emergency line",
+    "title": "Dental emergency? Call us any time, day or night",
+    "text": "Severe pain, swelling, a knocked-out tooth or bleeding that won't stop: call the clinic, even outside opening hours. You will get advice over the phone, and if you need to be seen urgently we will arrange it.",
+    "short": "Emergency calls answered 24×7"
+  },
+  "title": "Dental emergency? Here is what to do",
+  "lead": "Call us first: our emergency line is answered round the clock. While you wait, these steps help protect the tooth and ease the pain.",
+  "hospitalWarning": "Go straight to the nearest hospital emergency department if swelling is spreading towards the eye or down the neck, you are finding it hard to breathe or swallow, you have a high fever with a swollen face, your jaw may be broken, or bleeding continues after 20 minutes of firm pressure.",
+  "situations": [
+    { "title": "Throbbing toothache", "steps": ["Rinse gently with lukewarm salt water and floss around the tooth in case food is stuck.", "If you normally take a painkiller safely, take it as the label directs. Never place a tablet against the gum.", "Call us so the tooth can be checked as early as possible."] },
+    { "title": "A permanent tooth knocked out", "steps": ["Hold the tooth by its white crown and avoid touching the root.", "If it is dirty, dip it briefly in milk. Do not scrub it or wrap it in tissue.", "Slide it back into place and bite softly on a clean handkerchief, or carry it in a small cup of milk.", "Call us at once: the sooner it is replanted, the better the chance it survives."] },
+    { "title": "Cracked or chipped tooth", "steps": ["Rinse with warm water and save any broken piece in milk or a clean container.", "Hold something cold against the cheek to limit swelling.", "Call us; sharp edges can be smoothed quickly to protect your tongue and cheek."] },
+    { "title": "Swollen face or gum", "steps": ["Hold an ice pack wrapped in cloth against your cheek. Skip hot compresses: warmth can help an infection spread.", "Call us the same day.", "If the swelling grows quickly, or comes with fever or difficulty swallowing, go to hospital."] },
+    { "title": "Bleeding after a tooth is removed", "steps": ["Fold a clean gauze or cloth, place it over the socket and bite firmly for 20–30 minutes without lifting it to look.", "Stay upright and avoid spitting, rinsing or hot drinks.", "If bleeding is still heavy, call us or go to a hospital."] },
+    { "title": "Pain or swelling around an implant", "steps": ["Rinse gently with warm salt water and keep the area clean.", "Do not try to tighten or remove anything yourself.", "Call us so the implant and the gum around it can be checked."] }
+  ]
+}
