@@ -68,3 +68,4 @@ History (staging):
 | --- | --- | --- | --- |
 | 2026-10-26 | (ClinicFlow API, env only) | `clinicflow-api-staging-00098-556` | `APP_CORS_ALLOWEDORIGINS` += ADC origin, the 7 existing origins kept (rollback `00097-pzn`, the modular-pricing revision). Verified ADC/SPDC/SMSDC allowed, unknown origin 403, no ERROR logs. |
 | 2026-10-26 | `7253992` | `adc-frontend-staging-00001-75c` | First deploy (Cloud Build). 13 pages 200, 404 page, noindex header + robots Disallow, `/login` 307 to the staging portal, no ERROR logs. |
+| 2026-10-26 | `eba41a6` | `adc-frontend-staging-00002-5sm` | Redesign v2 (violet palette, Sora/Nunito Sans, fixed-height header, her photo). 8 pages 200 + 404; header height constant 73px while scrolling at 360 and 1280. Rollback `00001-75c`. |
