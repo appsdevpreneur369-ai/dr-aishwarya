@@ -13,7 +13,9 @@ import { pageMetadata } from '@/lib/seo';
 const p = sitePages.about;
 export const metadata = pageMetadata({ path: '/about', title: p.title, description: p.description });
 
-export const revalidate = 600;
+// Rendered per request so the live Google reviews are fetched while Cloud Run gives the request CPU (cached a day in
+// src/lib/google-reviews.ts). Static pages refreshed in the background timed out on Cloud Run.
+export const dynamic = 'force-dynamic';
 
 export default async function AboutPage() {
   const a = siteAbout;

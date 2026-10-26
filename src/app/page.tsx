@@ -23,8 +23,9 @@ import { pageMetadata } from '@/lib/seo';
 import { fill, fullAddress } from '@/lib/vars';
 
 export const metadata = pageMetadata({ path: '/', title: sitePages.home.title, description: sitePages.home.description, absoluteTitle: true });
-// Live Google reviews: the page re-renders at most every 10 minutes (the build has no API key); the Places API itself is called at most once a day (src/lib/google-reviews.ts).
-export const revalidate = 600;
+// Rendered per request so the live Google reviews are fetched while Cloud Run gives the request CPU (cached a day in
+// src/lib/google-reviews.ts). Static pages refreshed in the background timed out on Cloud Run.
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const h = siteHome;
