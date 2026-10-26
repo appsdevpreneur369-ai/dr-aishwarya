@@ -369,7 +369,7 @@ export function BookingWizard({ config, prefill = {}, onBooked, headingLevel = '
           {next && (
             <button
               type="button"
-              className="mt-4 flex w-full items-center gap-3 rounded-2xl border border-primary/30 bg-tint px-4 py-3 text-left hover:border-primary"
+              className="mt-4 flex w-full items-center gap-3 rounded-brand border border-primary/30 bg-tint px-4 py-3 text-left hover:border-primary"
               onClick={() => {
                 setDate(next.date);
                 setDoctorChoice(next.doctorSlug);
@@ -400,7 +400,7 @@ export function BookingWizard({ config, prefill = {}, onBooked, headingLevel = '
                     loadSlots(d);
                     go('time');
                   }}
-                  className={cn('flex min-h-[72px] w-[4.5rem] shrink-0 snap-start flex-col items-center justify-center rounded-2xl border bg-surface', date === d ? 'border-primary bg-tint' : 'border-border hover:border-primary')}
+                  className={cn('flex min-h-[72px] w-[4.5rem] shrink-0 snap-start flex-col items-center justify-center rounded-brand border bg-surface', date === d ? 'border-primary bg-tint' : 'border-border hover:border-primary')}
                 >
                   <span className="text-xs font-semibold uppercase text-textSecondary">{fmtDate(d, { weekday: 'short' })}</span>
                   <span className="font-heading text-2xl font-semibold text-text">{fmtDate(d, { day: 'numeric' })}</span>
@@ -543,7 +543,7 @@ export function BookingWizard({ config, prefill = {}, onBooked, headingLevel = '
 
 function Choice({ selected, onClick, title, text, initials, icon }: { selected: boolean; onClick: () => void; title: string; text: string; initials?: string; icon?: string }) {
   return (
-    <button type="button" role="radio" aria-checked={selected} onClick={onClick} className={cn('flex min-h-[64px] items-center gap-4 rounded-2xl border bg-surface px-4 py-3 text-left transition-colors', selected ? 'border-primary bg-tint' : 'border-border hover:border-primary')}>
+    <button type="button" role="radio" aria-checked={selected} onClick={onClick} className={cn('flex min-h-[64px] items-center gap-4 rounded-brand border bg-surface px-4 py-3 text-left transition-colors', selected ? 'border-primary bg-tint' : 'border-border hover:border-primary')}>
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[38%] bg-tint font-heading font-semibold text-primaryDeep ring-1 ring-mint">{initials ?? <Icon name={icon ?? 'check'} />}</span>
       <span className="flex-1">
         <span className="block font-semibold text-text">{title}</span>
@@ -613,7 +613,7 @@ function Field({ id, label, hint, error, children }: { id: string; label: string
 
 function Summary({ option, doctor, date, time }: { config: BookingClientConfig; option?: string; doctor?: string; date: string | null; time?: string }) {
   return (
-    <dl className="mt-4 grid grid-cols-[auto,1fr] gap-x-4 gap-y-1 rounded-2xl bg-tint px-4 py-3 text-sm">
+    <dl className="mt-4 grid grid-cols-[auto,1fr] gap-x-4 gap-y-1 rounded-brand bg-tint px-4 py-3 text-sm">
       <dt className="text-textSecondary">Concern</dt>
       <dd className="font-medium text-text">{option}</dd>
       <dt className="text-textSecondary">Doctor</dt>

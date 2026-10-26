@@ -30,7 +30,7 @@ export default function EmergencyPage() {
       <section className="section">
         <div className="container-site">
           <EmergencyLine className="mb-10" showGuideLink={false} />
-          <div role="note" className="mb-10 flex max-w-3xl gap-3 rounded-[1.5rem] border-2 border-warning/40 bg-warningSoft p-5">
+          <div role="note" className="mb-10 flex max-w-3xl gap-3 rounded-brand border-2 border-warning/40 bg-warningSoft p-5">
             <Icon name="triangle-alert" className="mt-0.5 h-6 w-6 shrink-0 text-warning" />
             <div>
               <h2 className="text-xl">When to go to hospital instead</h2>
@@ -39,7 +39,7 @@ export default function EmergencyPage() {
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {e.situations.map((s, i) => (
-              <section key={s.title} className="reveal rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft" aria-labelledby={`em-${i}`}>
+              <section key={s.title} className="reveal rounded-brand border border-border bg-surface p-6 shadow-soft" aria-labelledby={`em-${i}`}>
                 <h2 id={`em-${i}`} className="text-xl">
                   {s.title}
                 </h2>

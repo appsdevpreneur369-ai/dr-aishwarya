@@ -23,7 +23,7 @@ export default function FaqsPage() {
             <h2 className="sr-only">Questions and answers</h2>
             <Accordion items={siteFaqs.items.map((f) => ({ q: fill(f.q), a: fill(f.a) }))} />
           </div>
-          <aside className="on-dark h-fit rounded-[1.75rem] bg-navy p-7 text-onDark lg:sticky lg:top-32">
+          <aside className="on-dark h-fit rounded-brand bg-navy p-7 text-onDark lg:sticky lg:top-32">
             <Icon name="message-circle" className="h-7 w-7 text-cta" />
             <h2 className="mt-3 text-2xl !text-onDark">Still have a question?</h2>
             <p className="mt-2 text-onDarkMuted">Ask when you book, or call the clinic during opening hours.</p>

@@ -1,5 +1,5 @@
 {
-  "_note": "Every image the site uses, by id. Components never reference /public paths directly. clinic-* are the clinic's OWN photos (approved, no credit; supplied by the account owner 25 Oct 2026, max 680 px wide, so they are shown at card/gallery sizes and the hero uses a cropped one under an overlay). Every other photo is a REPRESENTATIVE stock image (Unsplash / Pexels licences, content/photo-credits.json, field credit) showing Indian faces. The logo is the clinic's own (images/logo.png, transparent version supplied 25 Oct 2026).",
+  "_note": "Every image the site uses, by id. Components never reference /public paths directly. clinic-* and doctor-* are the clinic's OWN photos (approved, no credit; supplied by the account owner 25–26 Oct 2026; doctor-* are two crops of images/dr-aishwarya.png that leave out its printed name label, max 680 px wide, so they are shown at card/gallery sizes and the hero uses a cropped one under an overlay). Every other photo is a REPRESENTATIVE stock image (Unsplash / Pexels licences, content/photo-credits.json, field credit) showing Indian faces. The logo is the clinic's own (images/logo.png, transparent version supplied 25 Oct 2026).",
   "logo": {
     "mark": {
       "src": "/brand/logo-mark.png",
@@ -14,27 +14,193 @@
     }
   },
   "images": {
-    "og": { "src": "/images/og.png", "width": 1200, "height": 630, "alt": "Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur", "status": "approved" },
-    "clinic-operatory": { "src": "/images/photos/clinic-operatory.jpg", "width": 680, "height": 510, "alt": "Treatment room at Aishwarya Dental Clinic with two dental chairs under a curved, back-lit ceiling", "status": "approved", "objectPosition": "50% 60%" },
-    "clinic-reception": { "src": "/images/photos/clinic-reception.jpg", "width": 680, "height": 442, "alt": "Reception desk and waiting sofas at Aishwarya Dental Clinic, with the clinic's tooth logo on a walnut panel", "status": "approved" },
-    "clinic-corridor": { "src": "/images/photos/clinic-corridor.jpg", "width": 680, "height": 445, "alt": "Bright corridor leading to the operatories at Aishwarya Dental Clinic", "status": "approved" },
-    "clinic-exterior": { "src": "/images/photos/clinic-exterior.jpg", "width": 615, "height": 226, "alt": "Front of Aishwarya Dental Clinic and Implant Centre with its signboard listing laser surgery, implants, root canal, clear aligners and cosmetology", "status": "approved" },
-    "treat-gums": { "src": "/images/photos/treat-gums.jpg", "width": 1200, "height": 800, "alt": "Close-up of healthy teeth and gums: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "treat-implants": { "src": "/images/photos/treat-implants.jpg", "width": 1200, "height": 800, "alt": "Dental X-rays on a light box: representative photo", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "treat-root-canal": { "src": "/images/photos/treat-root-canal.jpg", "width": 1200, "height": 800, "alt": "Cut-away tooth model showing the root canals", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "treat-braces": { "src": "/images/photos/treat-braces.jpg", "width": 1200, "height": 800, "alt": "Dental models with clear aligners and braces", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "treat-cosmetic": { "src": "/images/photos/treat-cosmetic.jpg", "width": 1200, "height": 800, "alt": "Young woman with a bright, natural smile: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "treat-general": { "src": "/images/photos/treat-general.jpg", "width": 1200, "height": 800, "alt": "Dentist examining a boy's teeth: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "treat-extraction": { "src": "/images/photos/treat-extraction.jpg", "width": 1200, "height": 800, "alt": "Sterile dental instruments in a gloved hand", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "treat-crowns": { "src": "/images/photos/treat-crowns.jpg", "width": 1200, "height": 800, "alt": "A row of dental crowns", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "space-toothbrushes": { "src": "/images/photos/space-toothbrushes.jpg", "width": 1200, "height": 900, "alt": "Toothbrushes in a glass jar", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "smile-grandparents": { "src": "/images/photos/smile-grandparents.jpg", "width": 1200, "height": 900, "alt": "Grandparents laughing with their grandchild: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "smile-young-woman": { "src": "/images/photos/smile-young-woman.jpg", "width": 1200, "height": 900, "alt": "Smiling young woman in a blue saree: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "smile-elder": { "src": "/images/photos/smile-elder.jpg", "width": 1200, "height": 900, "alt": "Elderly man smiling warmly: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "smile-family": { "src": "/images/photos/smile-family.jpg", "width": 1200, "height": 900, "alt": "Happy family of four: representative photo", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "article-bleeding-gums": { "src": "/images/photos/article-sensitive-teeth.jpg", "width": 1200, "height": 750, "alt": "Girl brushing her teeth: representative photo", "status": "placeholder", "credit": "Photo: Pexels (representative)" },
-    "article-implant-journey": { "src": "/images/photos/article-missing-tooth.jpg", "width": 1200, "height": 750, "alt": "Smiling elderly woman: representative photo", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "article-laser": { "src": "/images/photos/article-root-canal-pain.jpg", "width": 1200, "height": 750, "alt": "Patient relaxing in a dental chair: representative photo", "status": "placeholder", "credit": "Photo: Unsplash (representative)" },
-    "article-implant-care": { "src": "/images/photos/space-toothbrushes.jpg", "width": 1200, "height": 900, "alt": "Toothbrushes in a glass jar", "status": "placeholder", "credit": "Photo: Unsplash (representative)" }
+    "og": {
+      "src": "/images/og.png",
+      "width": 1200,
+      "height": 630,
+      "alt": "Aishwarya Dental Clinic and Implant Centre, Vidyanagar, Guntur",
+      "status": "approved"
+    },
+    "doctor-aishwarya-portrait": {
+      "src": "/images/photos/doctor-aishwarya-portrait.jpg",
+      "width": 310,
+      "height": 323,
+      "alt": "Dr. Aishwarya P, periodontist and implantologist, at her clinic",
+      "status": "approved",
+      "objectPosition": "50% 30%"
+    },
+    "doctor-aishwarya-wide": {
+      "src": "/images/photos/doctor-aishwarya-wide.jpg",
+      "width": 593,
+      "height": 268,
+      "alt": "Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror",
+      "status": "approved",
+      "objectPosition": "30% 40%"
+    },
+    "clinic-operatory": {
+      "src": "/images/photos/clinic-operatory.jpg",
+      "width": 680,
+      "height": 510,
+      "alt": "Treatment room at Aishwarya Dental Clinic with two dental chairs under a curved, back-lit ceiling",
+      "status": "approved",
+      "objectPosition": "50% 60%"
+    },
+    "clinic-reception": {
+      "src": "/images/photos/clinic-reception.jpg",
+      "width": 680,
+      "height": 442,
+      "alt": "Reception desk and waiting sofas at Aishwarya Dental Clinic, with the clinic's tooth logo on a walnut panel",
+      "status": "approved"
+    },
+    "clinic-corridor": {
+      "src": "/images/photos/clinic-corridor.jpg",
+      "width": 680,
+      "height": 445,
+      "alt": "Bright corridor leading to the operatories at Aishwarya Dental Clinic",
+      "status": "approved"
+    },
+    "clinic-exterior": {
+      "src": "/images/photos/clinic-exterior.jpg",
+      "width": 615,
+      "height": 226,
+      "alt": "Front of Aishwarya Dental Clinic and Implant Centre with its signboard listing laser surgery, implants, root canal, clear aligners and cosmetology",
+      "status": "approved"
+    },
+    "treat-gums": {
+      "src": "/images/photos/treat-gums.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Close-up of healthy teeth and gums: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "treat-implants": {
+      "src": "/images/photos/treat-implants.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Dental X-rays on a light box: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "treat-root-canal": {
+      "src": "/images/photos/treat-root-canal.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Cut-away tooth model showing the root canals",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "treat-braces": {
+      "src": "/images/photos/treat-braces.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Dental models with clear aligners and braces",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "treat-cosmetic": {
+      "src": "/images/photos/treat-cosmetic.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Young woman with a bright, natural smile: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "treat-general": {
+      "src": "/images/photos/treat-general.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Dentist examining a boy's teeth: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "treat-extraction": {
+      "src": "/images/photos/treat-extraction.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "Sterile dental instruments in a gloved hand",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "treat-crowns": {
+      "src": "/images/photos/treat-crowns.jpg",
+      "width": 1200,
+      "height": 800,
+      "alt": "A row of dental crowns",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "space-toothbrushes": {
+      "src": "/images/photos/space-toothbrushes.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Toothbrushes in a glass jar",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "smile-grandparents": {
+      "src": "/images/photos/smile-grandparents.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Grandparents laughing with their grandchild: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "smile-young-woman": {
+      "src": "/images/photos/smile-young-woman.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Smiling young woman in a blue saree: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "smile-elder": {
+      "src": "/images/photos/smile-elder.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Elderly man smiling warmly: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "smile-family": {
+      "src": "/images/photos/smile-family.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Happy family of four: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "article-bleeding-gums": {
+      "src": "/images/photos/article-sensitive-teeth.jpg",
+      "width": 1200,
+      "height": 750,
+      "alt": "Girl brushing her teeth: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Pexels (representative)"
+    },
+    "article-implant-journey": {
+      "src": "/images/photos/article-missing-tooth.jpg",
+      "width": 1200,
+      "height": 750,
+      "alt": "Smiling elderly woman: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "article-laser": {
+      "src": "/images/photos/article-root-canal-pain.jpg",
+      "width": 1200,
+      "height": 750,
+      "alt": "Patient relaxing in a dental chair: representative photo",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    },
+    "article-implant-care": {
+      "src": "/images/photos/space-toothbrushes.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Toothbrushes in a glass jar",
+      "status": "placeholder",
+      "credit": "Photo: Unsplash (representative)"
+    }
   }
 }

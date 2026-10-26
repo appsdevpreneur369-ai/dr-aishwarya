@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { siteClinic, siteEmergency, siteNav } from '@/lib/content';
+import { siteClinic, siteEmergency, siteHome, siteNav } from '@/lib/content';
 import { hoursSummary } from '@/lib/hours';
 import { channels, directionsHref, resolveHref } from '@/lib/links';
 import { fullAddress } from '@/lib/vars';
@@ -12,16 +12,16 @@ import { SocialLinks } from './SocialLinks';
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="on-dark relative mt-8 overflow-hidden rounded-t-[2.5rem] bg-navy pb-32 text-onDarkMuted md:pb-10">
-      <div aria-hidden="true" className="bg-waves pointer-events-none absolute inset-0" />
+    <footer className="on-dark bg-navy pb-32 text-onDarkMuted md:pb-10">
       <div className="container-site relative">
         <div className="grid gap-8 border-b border-onDark/10 py-12 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-          <p className="font-heading text-3xl font-medium leading-tight text-onDark sm:text-4xl">
-            A healthier smile is <span className="italic-accent text-cta">one visit away.</span>
-          </p>
+          <div>
+            <p className="font-heading text-2xl font-bold leading-tight text-onDark sm:text-3xl">{siteHome.cta.title}</p>
+            <p className="mt-2 max-w-xl">{siteHome.cta.lead}</p>
+          </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
             <BookButton className="btn-cta">
-              <Icon name="calendar-check" className="h-4 w-4" /> Book Appointment
+              <Icon name="calendar-check" className="h-4 w-4" /> {siteHome.cta.button}
             </BookButton>
             {channels.call && (
               <a href={channels.call.href} className="btn-dark-ghost">

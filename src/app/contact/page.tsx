@@ -35,7 +35,7 @@ export default function ContactPage() {
       <section className="section">
         <div className="container-site grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div className="space-y-6">
-            <div className="rounded-[1.75rem] border border-border bg-surface p-6 shadow-soft sm:p-8">
+            <div className="rounded-brand border border-border bg-surface p-6 shadow-soft sm:p-8">
               <h2 className="text-[1.8rem]">Get in touch</h2>
               <address className="mt-5 space-y-4 not-italic">
                 <p className="flex gap-3">
@@ -85,7 +85,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-soft">
+            <div className="overflow-hidden rounded-brand border border-border bg-surface shadow-soft">
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border bg-mintSoft px-6 py-4">
                 <h2 className="text-[1.6rem]">Timings</h2>
                 <OpenStatus hours={c.hours.days} timeZone={c.timezone} />
@@ -122,12 +122,12 @@ export default function ContactPage() {
                 <Icon name="info" className="mt-0.5 h-4 w-4 shrink-0" /> The map shows the area; the clinic&apos;s exact pin will be added soon. <DraftBadge status={c.maps.status} />
               </p>
             )}
-            <div className="rounded-[1.75rem] bg-navy p-6 text-onDark on-dark sm:p-8">
+            <div className="rounded-brand bg-navy p-6 text-onDark on-dark sm:p-8">
               <h2 className="text-xl !text-onDark">Finding us</h2>
               <ol className="mt-4 space-y-3">
                 {WAYFINDING.map((w, i) => (
                   <li key={w.text} className="flex gap-3 text-onDarkMuted">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-cta text-sm font-bold text-ctaInk">{i + 1}</span>
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[10px] bg-primary text-sm font-bold text-onDark">{i + 1}</span>
                     {w.text}
                   </li>
                 ))}

@@ -41,12 +41,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <article className="section">
         <div className="container-site grid gap-12 lg:grid-cols-[1fr_18rem]">
           <div>
-            <Image src={img.src} alt={img.alt} width={img.width} height={img.height} priority sizes="(min-width:1024px) 50rem, 100vw" className="mb-10 w-full max-w-prose rounded-[1.75rem] shadow-soft" />
+            <Image src={img.src} alt={img.alt} width={img.width} height={img.height} priority sizes="(min-width:1024px) 50rem, 100vw" className="mb-10 w-full max-w-prose rounded-brand shadow-soft" />
             <div className="prose-site" dangerouslySetInnerHTML={{ __html: a.html }} />
           </div>
           <aside className="space-y-5 lg:sticky lg:top-32 lg:self-start">
             {a.headings.length > 2 && (
-              <nav aria-label="On this page" className="rounded-[1.5rem] border border-border bg-surface p-5 shadow-soft">
+              <nav aria-label="On this page" className="rounded-brand border border-border bg-surface p-5 shadow-soft">
                 <p className="font-semibold">On this page</p>
                 <ul className="mt-3 space-y-2 border-l-2 border-mint pl-4 text-[0.95rem] text-textSecondary">
                   {a.headings.map((h) => (
@@ -55,7 +55,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 </ul>
               </nav>
             )}
-            <div className="on-dark rounded-[1.5rem] bg-navy p-6 text-onDark">
+            <div className="on-dark rounded-brand bg-navy p-6 text-onDark">
               <p className="font-heading text-xl text-onDark">Something bothering you?</p>
               <p className="mt-1 text-[0.95rem] text-onDarkMuted">A check-up is the quickest way to know what is going on.</p>
               <BookButton className="btn-cta mt-5 w-full">Book a check-up</BookButton>
@@ -69,7 +69,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {more.map((x) => (
               <li key={x.meta.slug}>
-                <Link href={`/patient-education/${x.meta.slug}`} className="flex min-h-[56px] items-center justify-between gap-2 rounded-2xl border border-border bg-surface px-4 font-semibold text-primaryDeep hover:border-primary">
+                <Link href={`/patient-education/${x.meta.slug}`} className="flex min-h-[56px] items-center justify-between gap-2 rounded-brand border border-border bg-surface px-4 font-semibold text-primaryDeep hover:border-primary">
                   {x.meta.title} <Icon name="chevron-right" className="h-4 w-4 shrink-0" />
                 </Link>
               </li>

@@ -13,7 +13,7 @@ export function LegalPage({ slug }: { slug: Key }) {
   if (!l) notFound();
   return (
     <>
-      <PageHeader title={l.meta.title} crumbs={[{ name: l.meta.title, path: `/${slug}` }]} badge={l.meta.draft ? <span className="ml-2 inline-flex rounded-full bg-tint px-3 py-1 align-middle font-body text-sm font-semibold text-primaryHover">Draft</span> : <DraftBadge status={l.meta.status} />}>
+      <PageHeader title={l.meta.title} crumbs={[{ name: l.meta.title, path: `/${slug}` }]} badge={l.meta.draft ? <span className="ml-2 inline-flex rounded-md bg-tint px-3 py-1 align-middle font-body text-sm font-semibold text-primaryHover">Draft</span> : <DraftBadge status={l.meta.status} />}>
         <p className="mt-3 text-sm text-textSecondary">Last updated {new Date(l.meta.lastUpdated).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
       </PageHeader>
       <section className="section">

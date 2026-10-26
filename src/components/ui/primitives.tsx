@@ -12,7 +12,7 @@ export function DraftBadge({ status, className, onDark }: { status: Status | und
   return (
     <span
       className={cn(
-        'inline-flex h-6 shrink-0 items-center rounded-full border px-2 align-middle text-xs font-semibold uppercase tracking-wide',
+        'inline-flex h-6 shrink-0 items-center rounded-md border px-2 align-middle text-xs font-semibold uppercase tracking-wide',
         onDark ? 'border-cta/60 text-cta' : 'border-warning/40 bg-warningSoft text-warningText',
         className,
       )}
@@ -41,13 +41,11 @@ export function Avatar({ initials, size = 'md', className }: { initials: string;
     <span
       aria-hidden="true"
       className={cn(
-        'relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-blob bg-gradient-to-br from-primary to-primaryDeep font-heading font-semibold text-onDark shadow-lift',
+        'relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-brand bg-gradient-to-br from-primary to-primaryDeep font-heading font-semibold text-onDark shadow-lift',
         size === 'lg' ? 'h-32 w-32 text-6xl' : 'h-16 w-16 text-2xl',
         className,
       )}
     >
-      <span className="absolute -right-5 -top-5 h-14 w-14 rounded-full bg-mint/40" />
-      <span className="absolute -bottom-3 -left-3 h-8 w-8 rounded-full bg-cta/70" />
       <span className="relative">{initials}</span>
     </span>
   );
@@ -72,10 +70,10 @@ export function Accordion({ items, name }: { items: { q: string; a: ReactNode }[
   return (
     <div className="space-y-3">
       {items.map((it, i) => (
-        <details key={i} name={name} className="group rounded-2xl border border-border bg-surface transition-shadow open:shadow-soft">
+        <details key={i} name={name} className="group rounded-brand border border-border bg-surface transition-shadow open:shadow-soft">
           <summary className="flex min-h-[60px] cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-heading text-[1.08rem] font-medium text-text marker:hidden hover:text-primaryDeep [&::-webkit-details-marker]:hidden">
             <span>{it.q}</span>
-            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mintSoft text-primary transition-colors group-open:bg-primary group-open:text-onDark">
+            <span className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-tint text-primary transition-colors group-open:bg-primary group-open:text-onDark">
               <Icon name="chevron-down" className="h-4 w-4 transition-transform duration-300 group-open:rotate-180" />
             </span>
           </summary>

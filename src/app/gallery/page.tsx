@@ -21,7 +21,7 @@ export default function GalleryPage() {
       <section className="section">
         <div className="container-site">
           {own.length < items.length && (
-            <p className="mb-8 flex max-w-3xl gap-3 rounded-2xl border border-cta/50 bg-warningSoft px-5 py-4 text-[0.95rem] text-text">
+            <p className="mb-8 flex max-w-3xl gap-3 rounded-brand border border-cta/50 bg-warningSoft px-5 py-4 text-[0.95rem] text-text">
               <Icon name="info" className="mt-0.5 h-5 w-5 shrink-0 text-warningText" /> {siteGallery.intro}
             </p>
           )}

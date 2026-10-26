@@ -47,13 +47,13 @@ export default function CategoryPage({ params }: { params: { category: string } 
           <div>
             <div className="prose-site">
               {c.intro.map((t, i) => (
-                <p key={t.slice(0, 24)} className={i === 0 ? 'font-heading text-[1.35rem] leading-snug text-navy' : 'text-lg'}>
+                <p key={t.slice(0, 24)} className={i === 0 ? 'text-[1.2rem] font-semibold leading-relaxed text-text' : 'text-lg'}>
                   {t}
                 </p>
               ))}
             </div>
             {c.confirmSpecialist && (
-              <p className="mt-2 flex max-w-prose gap-3 rounded-2xl border border-cta/50 bg-warningSoft px-4 py-3 text-[0.95rem]">
+              <p className="mt-2 flex max-w-prose gap-3 rounded-brand border border-cta/50 bg-warningSoft px-4 py-3 text-[0.95rem]">
                 <Icon name="info" className="mt-0.5 h-5 w-5 shrink-0 text-warningText" />
                 <span>
                   Your first consultation is with {headDoctor.displayName}, who examines you and plans the next steps. <DraftBadge status="placeholder" />
@@ -64,10 +64,10 @@ export default function CategoryPage({ params }: { params: { category: string } 
             <h2 className="mt-14">What&apos;s included</h2>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {c.subTreatments.map((s) => (
-                <li key={s.slug} className="reveal flex flex-col rounded-[1.5rem] border border-border bg-surface p-5 shadow-soft">
+                <li key={s.slug} className="reveal flex flex-col rounded-brand border border-border bg-surface p-5 shadow-soft">
                   <h3 className="text-[1.15rem]">{s.title}</h3>
                   <p className="mt-1.5 flex-1 text-[0.95rem] text-textSecondary">{s.summary}</p>
-                  <p className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-mintSoft px-3 py-1 text-sm font-semibold text-primaryDeep">
+                  <p className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-[10px] bg-tint px-3 py-1 text-sm font-semibold text-primaryDeep">
                     <Icon name="clock" className="h-4 w-4" /> {s.visits}
                   </p>
                 </li>
@@ -78,7 +78,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
             <ol className="relative mt-8 space-y-8 border-l-2 border-mint pl-8">
               {c.steps.map((s, i) => (
                 <li key={s.title} className="relative">
-                  <span className="absolute -left-[3.05rem] flex h-10 w-10 items-center justify-center rounded-full border-4 border-background bg-primary font-heading text-onDark">{i + 1}</span>
+                  <span className="absolute -left-[3.05rem] flex h-10 w-10 items-center justify-center rounded-[10px] border-4 border-background bg-primary font-heading text-onDark">{i + 1}</span>
                   <h3 className="text-[1.15rem]">{s.title}</h3>
                   <p className="mt-1 text-textSecondary">{s.text}</p>
                 </li>
@@ -94,7 +94,7 @@ export default function CategoryPage({ params }: { params: { category: string } 
           </div>
 
           <aside className="space-y-5 lg:sticky lg:top-32 lg:self-start">
-            <div className="on-dark relative overflow-hidden rounded-[1.75rem] bg-navy p-7 text-onDark">
+            <div className="on-dark relative overflow-hidden rounded-brand bg-navy p-7 text-onDark">
               <div aria-hidden="true" className="bg-waves pointer-events-none absolute inset-0" />
               <Icon name="indian-rupee" className="relative h-7 w-7 text-cta" />
               <h2 className="relative mt-3 text-2xl !text-onDark">About cost</h2>

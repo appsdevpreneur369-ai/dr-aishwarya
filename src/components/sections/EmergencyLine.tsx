@@ -13,11 +13,10 @@ export function EmergencyLine({ className, showGuideLink = true }: { className?:
   const a = siteEmergency.availability;
   if (!channels.call) return null;
   return (
-    <aside aria-labelledby="emergency-line" className={cn('on-dark relative overflow-hidden rounded-[1.5rem] bg-primaryDeep p-6 text-onDark shadow-lift sm:p-8', className)}>
-      <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full border border-onDark/10" />
+    <aside aria-labelledby="emergency-line" className={cn('on-dark relative overflow-hidden rounded-brand bg-primaryDeep p-6 text-onDark shadow-lift sm:p-8', className)}>
       <div className="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div className="flex gap-4">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cta text-ctaInk">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-brand bg-cta text-ctaInk">
             <Icon name="siren" className="h-6 w-6" />
           </span>
           <div>
@@ -31,7 +30,7 @@ export function EmergencyLine({ className, showGuideLink = true }: { className?:
           </div>
         </div>
         <div className="flex shrink-0 flex-wrap gap-3">
-          <a href={channels.call.href} className="btn-cta">
+          <a href={channels.call.href} className="btn-light">
             <Icon name="phone" className="h-4 w-4" /> {channels.call.display}
           </a>
           {showGuideLink && (

@@ -11,12 +11,13 @@ const config: Config = {
     extend: {
       colors,
       fontFamily: { heading: ['var(--font-heading)'], body: ['var(--font-body)'] },
-      borderRadius: { brand: 'var(--radius)', blob: '2.5rem 2.5rem 2.5rem 0.75rem' },
+      // One radius family: brand (12px) for cards/images, 10px for buttons and inputs (globals.css). 'blob' kept as an alias.
+      borderRadius: { brand: 'var(--radius)', blob: 'var(--radius)' },
       maxWidth: { site: '78rem', prose: '42rem' },
       boxShadow: {
-        soft: '0 1px 2px rgb(var(--c-navy) / 0.05), 0 10px 30px -14px rgb(var(--c-navy) / 0.18)',
-        lift: '0 2px 6px rgb(var(--c-navy) / 0.06), 0 24px 48px -20px rgb(var(--c-primaryDeep) / 0.38)',
-        glow: '0 12px 32px -12px rgb(var(--c-cta) / 0.75)',
+        soft: '0 1px 2px rgb(var(--c-navy) / 0.04), 0 4px 16px -8px rgb(var(--c-navy) / 0.12)',
+        lift: '0 2px 4px rgb(var(--c-navy) / 0.05), 0 16px 32px -16px rgb(var(--c-primaryDeep) / 0.28)',
+        glow: '0 8px 20px -10px rgb(var(--c-primary) / 0.6)',
       },
       keyframes: {
         'fade-up': { from: { opacity: '0', transform: 'translateY(14px)' }, to: { opacity: '1', transform: 'none' } },

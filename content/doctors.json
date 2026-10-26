@@ -1,5 +1,5 @@
 {
-  "_note": "Doctors shown on the site and sent to ClinicFlow (npm run tenant). Facts used, and their source: name Dr. Aishwarya P, MDS in Periodontics & Implantology (account owner, 25 Oct 2026, and the clinic signboard), Fellowship in Laser Dentistry (clinic signboard, use approved by the account owner 25 Oct 2026). NOT known and never invented: registration number, years of experience, awards, photo. Initials avatar until a real photo arrives; never a stock photo. Consultation hours follow the clinic's hours until she confirms her own (consultationStatus placeholder).",
+  "_note": "Doctors shown on the site and sent to ClinicFlow (npm run tenant). Facts used, and their source: name Dr. Aishwarya P, MDS in Periodontics & Implantology (account owner, 25 Oct 2026, and the clinic signboard), Fellowship in Laser Dentistry (clinic signboard, use approved by the account owner 25 Oct 2026). Photo: her own (images/dr-aishwarya.png, supplied 26 Oct 2026). NOT known and never invented: registration number, years of experience, awards. Never a stock photo. Consultation hours follow the clinic's hours until she confirms her own (consultationStatus placeholder).",
   "consultSlotMinutes": 15,
   "doctors": [
     {
@@ -16,8 +16,8 @@
       "schemaSpecialty": "Periodontics",
       "role": "Clinic Head",
       "isHead": true,
-      "photo": null,
-      "photoSecondary": null,
+      "photo": "doctor-aishwarya-portrait",
+      "photoSecondary": "doctor-aishwarya-wide",
       "registrationNumber": "",
       "clinicflowDoctorId": null,
       "summary": "Periodontist and implantologist with a fellowship in laser dentistry. She looks after gums, replaces missing teeth with implants and offers laser-assisted care alongside everyday dentistry.",
@@ -35,7 +35,18 @@
         "Clear aligners and smile makeovers"
       ],
       "consultation": [
-        { "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"], "opens": "10:00", "closes": "20:00" }
+        {
+          "days": [
+            "monday",
+            "tuesday",
+            "wednesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
       ],
       "consultationStatus": "placeholder",
       "experienceYears": null,

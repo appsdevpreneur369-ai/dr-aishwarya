@@ -36,9 +36,9 @@ describe('content schema', () => {
     expect(checkReferences(ok)).toEqual([]);
   });
 
-  it("doctor photos must be the clinic's own (a stock photo with a credit is rejected); none yet → initials", () => {
+  it("doctor photos must be the clinic's own (a stock photo with a credit is rejected)", () => {
     const c = parseAll(raw());
-    expect(c['doctors.json'].doctors[0].photo).toBeNull();
+    expect(c['doctors.json'].doctors[0].photo).toBe('doctor-aishwarya-portrait');
     const bad = structuredClone(c);
     bad['doctors.json'].doctors[0].photo = 'treat-gums';
     expect(checkReferences(bad).join()).toMatch(/stock photo/);
@@ -50,7 +50,7 @@ describe('content schema', () => {
     for (const [id, img] of Object.entries(imgs) as [string, { src: string; status: string; credit?: string }][]) {
       if (id === 'og') continue;
       const file = img.src.split('/').pop()!;
-      if (id.startsWith('clinic-')) {
+      if (id.startsWith('clinic-') || id.startsWith('doctor-')) {
         expect(img.status).toBe('approved');
         expect(img.credit).toBeUndefined();
         expect(credits.own[file]).toBeTruthy();

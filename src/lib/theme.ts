@@ -1,17 +1,17 @@
 import 'server-only';
-import { Manrope, Playfair_Display } from 'next/font/google';
+import { Nunito_Sans, Sora } from 'next/font/google';
 import { siteBrand } from './content';
 
 // next/font must be declared statically; brand.json picks from this registry by name (max 2 fonts).
 // display: 'swap' so the chosen fonts always appear; next/font preloads both and uses metric-matched fallbacks.
-// Headings: Playfair Display (high-contrast serif, matches the 'premium' logo). Body: Manrope (clean, very legible on
-// phones). Both variable fonts.
-const playfair = Playfair_Display({ subsets: ['latin'], weight: 'variable', variable: '--font-playfair', display: 'swap' });
-const manrope = Manrope({ subsets: ['latin'], weight: 'variable', variable: '--font-manrope', display: 'swap' });
+// Headings: Sora (clean geometric sans, clinical and modern). Body: Nunito Sans (friendly, very legible on phones).
+// Both variable fonts; neither is used by the other ClinicFlow247 clinic sites.
+const sora = Sora({ subsets: ['latin'], weight: 'variable', variable: '--font-sora', display: 'swap' });
+const nunito = Nunito_Sans({ subsets: ['latin'], weight: 'variable', variable: '--font-nunito', display: 'swap' });
 
 const registry: Record<string, { variable: string; cssVar: string; fallback: string }> = {
-  'Playfair Display': { variable: playfair.variable, cssVar: '--font-playfair', fallback: "Georgia, 'Times New Roman', serif" },
-  Manrope: { variable: manrope.variable, cssVar: '--font-manrope', fallback: "system-ui, 'Segoe UI', Arial, sans-serif" },
+  Sora: { variable: sora.variable, cssVar: '--font-sora', fallback: "system-ui, 'Segoe UI', Arial, sans-serif" },
+  'Nunito Sans': { variable: nunito.variable, cssVar: '--font-nunito', fallback: "system-ui, 'Segoe UI', Arial, sans-serif" },
 };
 
 function font(name: string) {

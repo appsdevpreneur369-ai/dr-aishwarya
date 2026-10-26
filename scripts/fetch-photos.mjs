@@ -11,8 +11,10 @@ import sharp from 'sharp';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 
-// Clinic's own photos: images/<file> → [output file, description]. Kept at their supplied size (never upscaled).
+// Clinic's own photos: images/<file> → [output file, description, optional crop]. Never upscaled. A crop
+// ({ left, top, width, height }) cuts one source into several shots, e.g. to leave out a printed name label.
 const OWN = {
+  'dr-aishwarya.png': ['doctor-aishwarya-wide.jpg', 'Dr. Aishwarya P smiling beside the clinic’s lit tooth-shaped mirror', { left: 0, top: 0, width: 593, height: 268 }],
   'clinic-interior-1.png': ['clinic-operatory.jpg', 'Treatment room with two dental chairs under a curved, back-lit ceiling'],
   'clinic-interior-2.png': ['clinic-reception.jpg', 'Reception desk and waiting sofas, with the clinic logo on the walnut panel'],
   'clinic-interior-3.png': ['clinic-corridor.jpg', 'Corridor leading to the operatories, lit by ceiling light lines'],
@@ -51,9 +53,11 @@ fs.mkdirSync(outDir, { recursive: true });
 const credits = STOCK ? {} : JSON.parse(fs.readFileSync(creditsFile, 'utf8')).photos;
 const own = {};
 
-for (const [src, [file, description]] of Object.entries(OWN)) {
+const OWN_EXTRA = [['dr-aishwarya.png', 'doctor-aishwarya-portrait.jpg', 'Portrait of Dr. Aishwarya P', { left: 30, top: 0, width: 310, height: 323 }]];
+for (const [src, file, description, crop] of [...Object.entries(OWN).map(([k, v]) => [k, ...v]), ...OWN_EXTRA]) {
   // PNGs with alpha are flattened on white (the supplied photos carry an opaque alpha channel).
-  await sharp(path.join(root, 'images', src)).rotate().flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true }).toFile(path.join(outDir, file));
+  const img = sharp(path.join(root, 'images', src)).rotate();
+  await (crop ? img.extract(crop) : img).flatten({ background: '#ffffff' }).jpeg({ quality: 88, mozjpeg: true }).toFile(path.join(outDir, file));
   own[file] = { source: `images/${src}`, description };
   console.log(file, '(clinic)');
 }

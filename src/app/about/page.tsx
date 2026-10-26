@@ -27,13 +27,12 @@ export default function AboutPage() {
             <p className="eyebrow">Our story</p>
             <h2 className="mt-4">{a.story.title}</h2>
             {a.story.paragraphs.map((t, i) => (
-              <p key={t.slice(0, 20)} className={i === 0 ? 'mt-6 font-heading text-[1.3rem] leading-snug text-navy' : 'mt-4 text-textSecondary'}>
+              <p key={t.slice(0, 20)} className={i === 0 ? 'mt-6 text-[1.2rem] font-semibold leading-relaxed text-text' : 'mt-4 text-textSecondary'}>
                 {t}
               </p>
             ))}
           </div>
           <figure className="relative">
-            <div aria-hidden="true" className="absolute -right-4 -top-4 h-full w-full rounded-blob bg-mintSoft" />
             <Image src={story.src} alt={story.alt} width={story.width} height={story.height} sizes="(min-width:1024px) 40vw, 100vw" className="relative aspect-[4/3] w-full rounded-blob object-cover shadow-lift" style={{ objectPosition: story.objectPosition }} />
             <figcaption className="relative mt-3 text-xs text-textSecondary">{story.credit ? 'Representative photo.' : story.alt}</figcaption>
           </figure>
@@ -45,7 +44,7 @@ export default function AboutPage() {
         <div aria-hidden="true" className="bg-waves pointer-events-none absolute inset-0" />
         <div className="container-site relative grid items-center gap-10 lg:grid-cols-[auto_1fr] lg:gap-16">
           {headPhoto ? (
-            <div className="relative mx-auto w-full max-w-[380px] overflow-hidden rounded-blob lg:mx-0">
+            <div className="relative mx-auto w-full max-w-[380px] overflow-hidden rounded-brand lg:mx-0">
               <Image src={headPhoto.src} alt={headPhoto.alt} width={headPhoto.width} height={headPhoto.height} sizes="380px" className="aspect-[4/5] w-full object-cover" style={{ objectPosition: headPhoto.objectPosition }} />
             </div>
           ) : (
@@ -85,7 +84,7 @@ export default function AboutPage() {
           <SectionHead eyebrow="Our promise" title={a.values.title} />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {a.values.items.map((v) => (
-              <li key={v.title} className="reveal rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+              <li key={v.title} className="reveal rounded-brand border border-border bg-surface p-6 shadow-soft">
                 <span className="icon-tile">
                   <Icon name={v.icon} />
                 </span>
@@ -99,13 +98,13 @@ export default function AboutPage() {
 
       <section className="section !pt-0">
         <div className="container-site grid gap-6 lg:grid-cols-2">
-          <div className="rounded-[1.75rem] border border-dashed border-primary/40 bg-mintSoft p-8">
+          <div className="rounded-brand border border-dashed border-primary/40 bg-mintSoft p-8">
             <Icon name="users" className="h-7 w-7 text-primary" />
             <h2 className="mt-3 text-2xl">{a.team.title}</h2>
             <p className="mt-2 text-textSecondary">{a.team.lead}</p>
           </div>
           {google && (
-            <a href={google.url} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 rounded-[1.75rem] border border-border bg-surface p-8 shadow-soft transition-shadow hover:shadow-lift">
+            <a href={google.url} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 rounded-brand border border-border bg-surface p-8 shadow-soft transition-shadow hover:shadow-lift">
               <span className="font-heading text-6xl text-navy">{VARS.googleRating}</span>
               <span>
                 <span className="block text-lg font-semibold">Rated by patients on Google</span>
@@ -127,7 +126,7 @@ export default function AboutPage() {
           <div>
             <ul className="grid gap-3">
               {patientBenefits(sitePlan).map((b) => (
-                <li key={b} className="flex gap-3 rounded-2xl bg-surface px-4 py-3 shadow-soft">
+                <li key={b} className="flex gap-3 rounded-brand bg-surface px-4 py-3 shadow-soft">
                   <Icon name="check" className="mt-1 h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} /> {b}
                 </li>
               ))}

@@ -35,7 +35,7 @@ export default function TreatmentsPage() {
               </li>
             ))}
           </ul>
-          <p className="mt-10 flex max-w-2xl gap-3 rounded-2xl bg-mintSoft px-5 py-4 text-text">
+          <p className="mt-10 flex max-w-2xl gap-3 rounded-brand bg-mintSoft px-5 py-4 text-text">
             <Icon name="indian-rupee" className="mt-0.5 h-5 w-5 shrink-0 text-primary" /> {siteServices.priceNote}
           </p>
         </div>

@@ -17,7 +17,6 @@ export default function NotFound() {
   const n = sitePages.notFound;
   return (
     <section className="section relative overflow-hidden">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-mint/50 blur-3xl" />
       <div className="container-site relative max-w-2xl text-center">
         <p className="font-heading text-8xl italic text-cta sm:text-9xl">404</p>
         <h1 className="mt-4 text-3xl sm:text-4xl">{n.h1}</h1>
@@ -25,7 +24,7 @@ export default function NotFound() {
         <ul className="mt-8 grid gap-3 text-left sm:grid-cols-2">
           {LINKS.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} className="flex min-h-[56px] items-center gap-3 rounded-2xl border border-border bg-surface px-5 py-3 font-semibold shadow-soft hover:border-primary">
+              <Link href={l.href} className="flex min-h-[56px] items-center gap-3 rounded-brand border border-border bg-surface px-5 py-3 font-semibold shadow-soft hover:border-primary">
                 <Icon name={l.icon} className="h-5 w-5 text-primary" /> {l.label}
               </Link>
             </li>

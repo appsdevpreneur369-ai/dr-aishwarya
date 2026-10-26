@@ -38,11 +38,11 @@ export function SocialLinks() {
       {siteSocial.links.map((l) => (
         <li key={l.platform}>
           {l.url ? (
-            <a href={l.url} target="_blank" rel="noopener noreferrer" aria-label={l.label} className="flex h-11 w-11 items-center justify-center rounded-full border border-onDark/25 text-onDark hover:bg-onDark/10">
+            <a href={l.url} target="_blank" rel="noopener noreferrer" aria-label={l.label} className="flex h-11 w-11 items-center justify-center rounded-[10px] border border-onDark/25 text-onDark hover:bg-onDark/10">
               {SVG[l.platform]}
             </a>
           ) : (
-            <span title={`${l.label} — coming soon`} className="flex h-11 w-11 cursor-default items-center justify-center rounded-full border border-onDark/15 text-onDarkMuted opacity-60">
+            <span title={`${l.label} — coming soon`} className="flex h-11 w-11 cursor-default items-center justify-center rounded-[10px] border border-onDark/15 text-onDarkMuted opacity-60">
               {SVG[l.platform]}
               <span className="sr-only">{l.label} (coming soon)</span>
             </span>

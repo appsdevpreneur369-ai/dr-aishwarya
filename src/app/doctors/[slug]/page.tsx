@@ -63,7 +63,7 @@ export default function DoctorPage({ params }: { params: { slug: string } }) {
       <section aria-label="At a glance" className="container-site relative z-10 -mt-8">
         <ul className="grid gap-3 xs:grid-cols-2 lg:grid-cols-4">
           {facts.map((f) => (
-            <li key={f.label} className="flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 shadow-lift">
+            <li key={f.label} className="flex items-center gap-3 rounded-brand border border-border bg-surface p-4 shadow-lift">
               <span className="icon-tile !h-11 !w-11">
                 <Icon name={f.icon} className="h-5 w-5" />
               </span>
@@ -89,7 +89,7 @@ export default function DoctorPage({ params }: { params: { slug: string } }) {
             <h2 className="mt-10 text-2xl">Areas of focus</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {d.focus.map((f) => (
-                <li key={f} className="flex items-center gap-3 rounded-2xl bg-mintSoft px-4 py-3 font-semibold">
+                <li key={f} className="flex items-center gap-3 rounded-brand bg-mintSoft px-4 py-3 font-semibold">
                   <Icon name="badge-check" className="h-5 w-5 shrink-0 text-primary" /> {f}
                 </li>
               ))}
@@ -103,11 +103,11 @@ export default function DoctorPage({ params }: { params: { slug: string } }) {
           </div>
           <aside className="space-y-5 lg:sticky lg:top-32 lg:self-start">
             {photo2 && (
-              <figure className="overflow-hidden rounded-[1.5rem] border border-border bg-surface shadow-soft">
-                <Image src={photo2.src} alt={photo2.alt} width={photo2.width} height={photo2.height} sizes="(min-width:1024px) 30vw, 100vw" className="aspect-[4/5] w-full object-cover" style={{ objectPosition: photo2.objectPosition ?? '50% 20%' }} />
+              <figure className="overflow-hidden rounded-brand border border-border bg-surface shadow-soft">
+                <Image src={photo2.src} alt={photo2.alt} width={photo2.width} height={photo2.height} sizes="(min-width:1024px) 30vw, 100vw" className="h-auto w-full" />
               </figure>
             )}
-            <div className="overflow-hidden rounded-[1.5rem] border border-border bg-surface shadow-soft">
+            <div className="overflow-hidden rounded-brand border border-border bg-surface shadow-soft">
               <h2 className="bg-navy px-6 py-4 text-lg !text-onDark">Consultation times</h2>
               <ul className="space-y-2 px-6 py-5 text-textSecondary">
                 {d.consultation.map((c, i) => (
@@ -125,7 +125,7 @@ export default function DoctorPage({ params }: { params: { slug: string } }) {
               </p>
             </div>
             {treats.length > 0 && (
-              <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+              <div className="rounded-brand border border-border bg-surface p-6 shadow-soft">
                 <h2 className="text-lg">Treatments</h2>
                 <ul className="mt-2">
                   {treats.map((c) => (

@@ -17,10 +17,10 @@ export function MapFacade({ src, title, label }: { src: string; title: string; l
           <span aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgb(var(--c-mint))_0,transparent_45%),radial-gradient(circle_at_75%_70%,rgb(var(--c-mintSoft))_0,transparent_40%)]" />
           <span aria-hidden="true" className="absolute inset-x-0 top-1/2 h-3 -translate-y-1/2 rotate-[-8deg] bg-surface/80" />
           <span aria-hidden="true" className="absolute inset-y-0 left-1/3 w-2.5 rotate-[12deg] bg-surface/70" />
-          <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-surface shadow-lift transition-transform group-hover:scale-105">
+          <span className="relative flex h-14 w-14 items-center justify-center rounded-[10px] bg-primary text-surface shadow-lift transition-transform group-hover:scale-105">
             <Icon name="map-pin" className="h-7 w-7" />
           </span>
-          <span className="relative rounded-full bg-surface px-5 py-2.5 font-semibold text-primaryDeep shadow-soft">{label}</span>
+          <span className="relative rounded-[10px] bg-surface px-5 py-2.5 font-semibold text-primaryDeep shadow-soft">{label}</span>
           <span className="relative text-sm text-textSecondary">Loads Google Maps</span>
         </button>
       )}

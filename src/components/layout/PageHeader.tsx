@@ -11,7 +11,7 @@ export type Crumb = { name: string; path: string };
 
 /**
  * Image layouts for the banner photo:
- *  - 'default'  : photo in a soft blob frame on the right, desktop only (treatment pages).
+ *  - 'default'  : framed photo on the right, desktop only (treatment pages).
  *  - 'wide'     : larger photo, also shown full width under the heading on mobile (About).
  *  - 'portrait' : 4:5 frame (doctor pages).
  * The photo is priority-loaded (usually the LCP element) and cropped around image.objectPosition.
@@ -25,25 +25,23 @@ const GRID: Record<Layout, string> = {
 const FRAME: Record<Layout, string> = {
   default: 'hidden lg:block',
   wide: 'block',
-  portrait: 'mx-auto block w-full max-w-[400px] lg:mx-0 lg:w-[400px] lg:max-w-none',
+  portrait: 'mx-auto block w-full max-w-[320px] lg:mx-0 lg:w-[320px] lg:max-w-none',
 };
 const ASPECT: Record<Layout, string> = { default: 'aspect-[4/3]', wide: 'aspect-[16/11]', portrait: 'aspect-[4/5]' };
 const SIZES: Record<Layout, string> = {
   default: '(min-width:1024px) 38vw, 0px',
   wide: '(min-width:1280px) 640px, (min-width:1024px) 52vw, 100vw',
-  portrait: '(min-width:1024px) 400px, min(400px, 100vw)',
+  portrait: '(min-width:1024px) 320px, min(320px, 100vw)',
 };
 
-/** Inner-page banner on a light, gridded background: breadcrumbs (+ BreadcrumbList JSON-LD), the page's single H1, intro, optional photo. */
+/** Inner-page banner on a light lavender wash: breadcrumbs (+ BreadcrumbList JSON-LD), the page's single H1, intro, optional photo. */
 export function PageHeader({
   title, intro, crumbs, badge, children, image, imageLayout = 'default',
 }: { title: string; intro?: string; crumbs: Crumb[]; badge?: ReactNode; children?: ReactNode; image?: ImageRef; imageLayout?: Layout }) {
   const all = [{ name: 'Home', path: '/' }, ...crumbs];
   return (
-    <section className="relative overflow-hidden border-b border-border bg-surfaceAlt">
+    <section className="bg-hero border-b border-border">
       <JsonLd data={breadcrumbJsonLd(all)} />
-      <div aria-hidden="true" className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_left,black,transparent_70%)]" />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full bg-mint/40 blur-3xl" />
       <div className={cn('container-site relative grid items-center gap-8 py-10 sm:py-14 lg:gap-14', image && GRID[imageLayout])}>
         <div>
           <nav aria-label="Breadcrumb">
@@ -72,8 +70,7 @@ export function PageHeader({
         </div>
         {image && (
           <div className={cn('relative', FRAME[imageLayout])}>
-            <div aria-hidden="true" className="absolute -bottom-4 -left-4 h-full w-full rounded-blob bg-mint" />
-            <div className="relative overflow-hidden rounded-blob shadow-lift">
+            <div className="overflow-hidden rounded-brand border border-border bg-surface shadow-soft">
               <Image
                 src={image.src}
                 alt={image.alt}

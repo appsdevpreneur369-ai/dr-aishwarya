@@ -21,7 +21,7 @@ export function GalleryGrid({ items, categories }: { items: Item[]; categories: 
       <ul className="columns-1 gap-4 sm:columns-2 lg:columns-3">
         {shown.map((i) => (
           <li key={i.src} className="group mb-4 break-inside-avoid">
-            <figure className="overflow-hidden rounded-[1.5rem] border border-border bg-surface shadow-soft">
+            <figure className="overflow-hidden rounded-brand border border-border bg-surface shadow-soft">
               <div className="overflow-hidden">
                 <Image src={i.src} alt={i.alt} width={i.width} height={i.height} sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.03]" style={{ objectPosition: i.objectPosition ?? '50% 35%' }} />
               </div>

@@ -28,7 +28,9 @@ Status (26 Oct 2026): repo https://github.com/appsdevpreneur369-ai/dr-aishwarya 
 - On staging `WHATSAPP_ENABLED=false`: sends are logged `[WhatsApp DRY RUN] to=… template=… params=[…]`. **No admin screen shows message text yet** (being built in the modular-pricing session; don't build it here).
 
 ## Stack and brand
-Next.js 14.2 App Router, TypeScript strict, Tailwind, next/font (**Playfair Display** headings + **Manrope** body), zod, vitest, lucide-react. Palette from the logo (`content/brand.json`): steel blue `#2F5878`, graphite `#1B2128`, silver tint `#C7D2DD`, champagne CTA `#DCC08A` (background only, graphite text). `npm run contrast` passes AA. The same colours feed `themeTokens`. Logo master `images/logo.png` (transparent); `npm run brand` derives header mark, favicon, app icons and OG image.
+Next.js 14.2 App Router, TypeScript strict, Tailwind, next/font (**Sora** headings + **Nunito Sans** body), zod, vitest, lucide-react.
+
+**Design v2 (26 Oct 2026, owner's feedback):** clean clinical layout, different from the other clinic sites (SPDC/SMSDC teal, DR-SINDHU blue, WalkWell green). Violet palette taken from the name label on Dr. Aishwarya's photo (`content/brand.json`): primary `#5A3EB8` (all main buttons, white text), violet-ink `#1D1934` (top bar, footer), lavender tints, lilac `#C9BAFB` accent on dark only. One radius family (12px cards/images, 10px buttons/inputs), plain-text nav with an underline for the current page (no pills), no decorative blobs. The header has a FIXED 72px height: scrolling only toggles its shadow (a padding change at the scroll threshold made it bounce). Her photo `images/dr-aishwarya.png` is used as two crops without its printed name label (`doctor-aishwarya-wide`, `-portrait`), always at natural size (it is only ~600 px wide). `npm run contrast` passes AA; the same colours and fonts feed `themeTokens`.
 
 ## Commands
 

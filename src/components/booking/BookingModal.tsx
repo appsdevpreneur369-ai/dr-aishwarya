@@ -44,7 +44,7 @@ export function BookingModal({ config, prefill, auto, onClose }: { config: Booki
         role="dialog"
         aria-modal="true"
         aria-labelledby="booking-title"
-        className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-background shadow-lift md:h-auto md:max-h-[90vh] md:max-w-2xl md:rounded-[1.75rem] motion-safe:animate-fade-up"
+        className="relative flex h-[100dvh] w-full flex-col overflow-hidden bg-background shadow-lift md:h-auto md:max-h-[90vh] md:max-w-2xl md:rounded-brand motion-safe:animate-fade-up"
       >
         <div className="flex items-center justify-between gap-4 border-b border-border bg-surface px-5 py-3">
           <div>
@@ -53,7 +53,7 @@ export function BookingModal({ config, prefill, auto, onClose }: { config: Booki
             </p>
             {auto && <p className="text-sm text-textSecondary">Takes about a minute. Close this any time.</p>}
           </div>
-          <button type="button" onClick={() => onClose(booked)} className="flex h-11 w-11 items-center justify-center rounded-full text-text hover:bg-tint" aria-label="Close booking" data-autofocus>
+          <button type="button" onClick={() => onClose(booked)} className="flex h-11 w-11 items-center justify-center rounded-[10px] text-text hover:bg-tint" aria-label="Close booking" data-autofocus>
             <Icon name="x" />
           </button>
         </div>

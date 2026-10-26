@@ -19,7 +19,7 @@ export default function DoctorsPage() {
           {siteDoctors.map((d) => (
             <DoctorCard key={d.id} d={d} headingLevel="h2" />
           ))}
-          <div className="flex items-start gap-4 rounded-[1.75rem] border border-dashed border-primary/40 bg-mintSoft p-6 sm:p-8">
+          <div className="flex items-start gap-4 rounded-brand border border-dashed border-primary/40 bg-mintSoft p-6 sm:p-8">
             <Icon name="users" className="mt-1 h-6 w-6 shrink-0 text-primary" />
             <div>
               <h2 className="text-xl">{siteAbout.team.title}</h2>

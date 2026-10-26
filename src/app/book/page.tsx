@@ -16,11 +16,11 @@ export default function BookPage() {
       <PageHeader title={p.h1!} intro={p.intro} crumbs={[{ name: 'Book', path: '/book' }]} />
       <section className="section">
         <div className="container-site grid gap-10 lg:grid-cols-[1.5fr_1fr]">
-          <div className="rounded-[1.75rem] border border-border bg-surface p-5 shadow-lift sm:p-8">
+          <div className="rounded-brand border border-border bg-surface p-5 shadow-lift sm:p-8">
             <BookPageWizard />
           </div>
           <aside className="space-y-5">
-            <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+            <div className="rounded-brand border border-border bg-surface p-6 shadow-soft">
               <h2 className="text-xl">Clinic hours</h2>
               <OpenStatus hours={siteClinic.hours.days} timeZone={siteClinic.timezone} className="mt-2" />
               {channels.call && (
@@ -32,7 +32,7 @@ export default function BookPage() {
                 </p>
               )}
             </div>
-            <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+            <div className="rounded-brand border border-border bg-surface p-6 shadow-soft">
               <h2 className="text-xl">After you book</h2>
               <ul className="mt-3 space-y-2 text-[0.95rem]">
                 {patientBenefits(sitePlan).map((b) => (
@@ -42,7 +42,7 @@ export default function BookPage() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-[1.5rem] border border-border bg-surface p-6 shadow-soft">
+            <div className="rounded-brand border border-border bg-surface p-6 shadow-soft">
               <h2 className="text-xl">Already a patient?</h2>
               <p className="mt-1 text-[0.95rem] text-textSecondary">See or manage your appointments on the clinic&apos;s ClinicFlow247 page.</p>
               <div className="mt-4 flex flex-wrap gap-2">
